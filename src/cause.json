@@ -1,0 +1,68 @@
+{
+  "causeId": "1",
+  "artistsDescription": "Explore Brazil's new music scene with artists whose sounds blend traditional and new.",
+  "charitiesDescription": "From clean water projects in developing countries to cancer research, here are some of the organizations having reshape the world we live in.",
+  "albums": [
+    {
+      "name": "Aventureira",
+      "artist": "Luiza Sales",
+      "coverImage":  "assets/images/cover-aventureira.jpg",
+      "artistImage": "assets/images/luiza.jpg",
+      "smallDescription": "Segundo trabalho da violonista, arranjadora, compositora, cantora e produtora brasileira.",
+      "bigDescription": "Segundo disco do sexteto instrumental carioca com sua mistura de MPB e ritmos latinos. E mais um pouco de texto aqui e ali e coisa e tal.",
+      "tracks": [
+        { "number": "1", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "title": "Procurando Lola" },
+        { "number": "2", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "title": "Dona do relâmpago" },
+        { "number": "3", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "title": "Vacas magras" },
+        { "number": "4", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "title": "Vinte e nove" },
+        { "number": "5", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "title": "Machucado" },
+        { "number": "6", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "title": "Onda do mar" },
+        { "number": "7", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "title": "Ainda danço sozinho" },
+        { "number": "8", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "title": "Samba em três" },
+        { "number": "9", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "title": "Órbita" },
+        { "number": "10","composers": [ "Antonia Adnet", "Gabriel Pondé" ], "title": "Toda calma desse mundo" }
+      ]
+    },
+    {
+      "name": "Aventureira",
+      "artist": "Luiza Sales",
+      "coverImage":  "assets/images/cover-aventureira.jpg",
+      "artistImage": "assets/images/luiza.jpg",
+      "smallDescription": "Segundo trabalho da violonista, arranjadora, compositora, cantora e produtora brasileira.",
+      "bigDescription": "Segundo disco do sexteto instrumental carioca com sua mistura de MPB e ritmos latinos. E mais um pouco de texto aqui e ali e coisa e tal.",
+      "tracks": [
+        { "number": "1", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "title": "Procurando Lola" },
+        { "number": "2", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "title": "Dona do relâmpago" },
+        { "number": "3", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "title": "Vacas magras" },
+        { "number": "4", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "title": "Vinte e nove" },
+        { "number": "5", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "title": "Machucado" },
+        { "number": "6", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "title": "Onda do mar" },
+        { "number": "7", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "title": "Ainda danço sozinho" },
+        { "number": "8", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "title": "Samba em três" },
+        { "number": "9", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "title": "Órbita" },
+        { "number": "10","composers": [ "Antonia Adnet", "Gabriel Pondé" ], "title": "Toda calma desse mundo" }
+      ]
+    }
+  ], 
+  "charities": [
+    {
+      "name": "Charity Water",
+      "image": "assets/images/charity1.jpg",
+      "link": "http://www.charitywater.org/",
+      "description": "Lorem ipsizzle dolor shizznit amet, consectetuer adipiscing elit. Nullam sapizzle velizzle, own yo' for sure, suscipit quis, gangster fo shizzle, arcu. Pellentesque pimpin' tortizzle. Fo shizzle erizzle. Yippiyo nizzle gangsta dapibus daahng dawg tempus tempor. Maurizzle shit nibh things turpizzle."
+    },
+    {
+      "name": "Another Charity",
+      "image": "assets/images/charity2.jpg",
+      "link": "http://www.charitywater.org/",
+      "description": "Meggings chillwave drinking vinegar Austin artisan bespoke, Neutra salvia occupy. Chillwave letterpress street art, normcore synth tilde Echo Park Pinterest squid typewriter Godard. \n\nPitchfork hashtag deep v, bicycle rights PBR scenester Williamsburg mixtape asymmetrical hoodie seitan Cosby sweater before they sold out crucifix. Godard Vice cliche chillwave hashtag jean shorts, readymade VHS synth beard lo-fi literally. Photo booth tattooed bitters, next level fanny pack lo-fi farm-to-table letterpress vegan forage typewriter."
+    },
+    {
+      "name": "One Mor",
+      "image": "assets/images/charity3.jpg",
+      "link": "http://www.charitywater.org/",
+      "description": "Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.\n\nEfficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions."
+    }
+  ]
+}
+    };
