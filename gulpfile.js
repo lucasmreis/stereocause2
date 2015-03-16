@@ -10,12 +10,10 @@ gulp.task('styles', function() {
 });
 
 gulp.task('template-index', function () {
-  var templateData = {
-    title: 'Stereo Cause'
-  };
+  var cause = require('./src/cause.json');
 
   return gulp.src('src/templates/index.handlebars')
-    .pipe(handlebars(templateData))
+    .pipe(handlebars(cause))
     .pipe(rename('index.html'))
     .pipe(gulp.dest('dist'));
 });

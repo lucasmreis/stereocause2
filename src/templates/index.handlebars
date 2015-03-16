@@ -13,6 +13,39 @@
 
   </head>
   <body>
-    <h1>{{ title }}</h1>
+    <h1>nav bar</h1>
+    
+    <h1>title</h1>
+
+    <div id="artists" class="container artists-and-charities">
+      <p class="section-title">Meet the artists:</p>
+      <p class="section-body">{{ cause.artistsDescription }}</p>
+  
+      <div class="row">
+        <div class="col-md-2 col-sm-3 col-xs-6">
+
+          {{#each albums}}
+          <div class="card">
+            <img ng-src={{ coverImage }}
+                 alt="{{ name }}">
+            <div class="card-text">
+              <p class="card-title">{{ name }}</p>
+              <p class="card-body">{{ artist }}</p>
+              <p>fa locked</p>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+
+    <h1>charities</h1>
+    
+    <h1>stats - react</h1>
+    
+    <h1>form - react</h1>
+    
+    <h1>footer</h1>
+  
   </body>
 </html>
