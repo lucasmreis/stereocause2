@@ -8,8 +8,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     
+    <!-- Styles -->
+    <link href="styles/reset.css" rel="stylesheet" type="text/css">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+
     <!-- Font -->
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
   </head>
   <body>
@@ -21,22 +26,18 @@
       <p class="section-title">Meet the artists:</p>
       <p class="section-body">{{ cause.artistsDescription }}</p>
   
-      <div class="row">
-        <div class="col-md-2 col-sm-3 col-xs-6">
-
-          {{#each albums}}
-          <div class="card">
-            <img ng-src={{ coverImage }}
-                 alt="{{ name }}">
-            <div class="card-text">
-              <p class="card-title">{{ name }}</p>
-              <p class="card-body">{{ artist }}</p>
-              <p>fa locked</p>
-            </div>
+        {{#each albums}}
+        <div class="card">
+          <img ng-src={{ coverImage }}
+               alt="{{ name }}">
+          <div class="card-text">
+            <p class="card-title">{{ name }}</p>
+            <p class="card-body">{{ artist }}</p>
+            <p><i class="fa fa-unlock-alt"></i></p>
           </div>
-          {{/each}}
         </div>
-      </div>
+
+        {{/each}}
     </div>
 
     <h1>charities</h1>

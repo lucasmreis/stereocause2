@@ -27,6 +27,7 @@
     "gulp": "^3.8.11",
     "gulp-compile-handlebars": "^0.4.4",
     "gulp-rename": "^1.2.0",
-    "gulp-sass": "^1.3.3"
+    "gulp-sass": "^1.3.3",
+    "gulp-watch": "^4.2.0"
   }
 }

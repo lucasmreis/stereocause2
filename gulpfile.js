@@ -19,3 +19,7 @@ gulp.task('template-index', function () {
 });
 
 gulp.task('default', ['template-index', 'styles']);
+
+gulp.task('watch', function () {
+  gulp.watch('src/**/*.*', ['default']);
+});

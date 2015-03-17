@@ -1,6 +1,23 @@
+$sc-font-family: 'Montserrat', sans-serif;
+$sc-title-font-size: 24px;
+$sc-body-font-size: 24px;
+$sc-font-color: rgba(0,0,0,0.8);
+
 body {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 17px;
-  color: rgba(0,0,0,0.8);
-  line-height: 1.8em;
+  font-family: $sc-font-family;
+  line-height: 1.5em;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section-title {
+  font-size: $sc-title-font-size;
+}
+
+.section-body {
+  font-size: $sc-body-font-size;
 }
