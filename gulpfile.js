@@ -10,7 +10,7 @@ gulp.task('assets', function() {
 
 gulp.task('styles', function() {
   return gulp.src('src/styles/*.scss')
-    .pipe(sass())
+    .pipe(sass({errLogToConsole: true}))
     .pipe(gulp.dest('dist/styles'));
 });
 

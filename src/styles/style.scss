@@ -3,6 +3,9 @@ $sc-title-font-size: 24px;
 $sc-body-font-size: 22px;
 $sc-card-font-size: 14px;
 
+$sc-bigtitle-large-font-size: 58px;
+$sc-bigtitle-small-font-size: 32px;
+
 $sc-dark-gray: #333;
 $sc-medium-gray: #777;
 $sc-light-gray: #eee;
@@ -14,13 +17,105 @@ $width-sm: 768px;
 $width-md: 992px;
 $width-lg: 1200px;
 
+$container-width: 1000px;
+$upper-bar-height: 50px;
+
 body {
   font-family: $sc-font-family;
   line-height: 1.8em;
 }
 
+// UPPER BAR
+
+.upper-bar {
+  font-size: $sc-title-font-size;
+  background-color: $sc-blue;
+  height: $upper-bar-height;
+  line-height: $upper-bar-height;
+}
+
+.upper-bar .upper-bar-wrapper {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.upper-bar i {
+  color: white;
+}
+
+// TITLE
+
+.title {
+  background-image: url('../assets/images/bigtitleimg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+  text-shadow: $sc-dark-gray 2px 2px 2px;
+  text-align: center;
+}
+
+.title h1 {
+  font-size: $sc-bigtitle-large-font-size;
+  line-height: 1.5em;
+  font-weight: bold;
+  padding: 50px;
+
+  @media (max-width: $width-sm - 1) {
+    font-size: $sc-bigtitle-large-font-size 0.8;
+  }
+}
+
+.title h1 .and {
+  font-family: Georgia, serif;
+  font-size: $sc-bigtitle-large-font-size * 1.7;
+  font-style: italic;
+
+  @media (max-width: $width-sm - 1) {
+    font-size: $sc-bigtitle-large-font-size * 1.7 * 0.6;
+  }
+}
+
+.title h2 {
+  font-size: $sc-bigtitle-small-font-size;
+  line-height: 1.3em;
+  padding: 50px;
+
+  @media (max-width: $width-sm - 1) {
+    font-size: $sc-title-font-size;
+    line-height: 1.6em;
+  }
+}
+
+.title h2 a {
+  color: white;
+  text-decoration: underline;
+}
+
+.title-button-wrapper {
+  padding: 50px 0 130px;
+}
+
+.title .title-button {
+  background-color: $sc-blue;
+  color: white;
+  text-shadow: none;
+  font-size: $sc-bigtitle-small-font-size * 0.8;
+  width: 400px;
+  text-decoration: none;
+  padding: 13px 70px;
+
+  @media (max-width: $width-sm - 1) {
+    font-size: $sc-title-font-size;
+  }
+}
+
+// ARTISTS
+
 .container {
-  max-width: 1000px;
+  max-width: $container-width;
   margin: 0 auto;
   padding: 20px;
 }
