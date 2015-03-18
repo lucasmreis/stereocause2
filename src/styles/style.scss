@@ -8,7 +8,8 @@ $sc-bigtitle-small-font-size: 32px;
 
 $sc-dark-gray: #333;
 $sc-medium-gray: #777;
-$sc-light-gray: #eee;
+$sc-light-gray: #bbb;
+$sc-lighter-gray: #eee;
 
 $sc-blue: #03a9f4;
 $sc-light-blue: #b3e5fc;
@@ -24,8 +25,6 @@ body {
   font-family: $sc-font-family;
   line-height: 1.8em;
 }
-
-// UPPER BAR
 
 .upper-bar {
   font-size: $sc-title-font-size;
@@ -43,8 +42,6 @@ body {
 .upper-bar i {
   color: white;
 }
-
-// TITLE
 
 .title {
   background-image: url('../assets/images/bigtitleimg.jpg');
@@ -112,8 +109,6 @@ body {
   }
 }
 
-// ARTISTS
-
 .container {
   max-width: $container-width;
   margin: 0 auto;
@@ -144,7 +139,7 @@ body {
 
 .card {
   font-size: $sc-card-font-size;
-  line-height: 1.2em;
+  line-height: 1.3em;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -183,7 +178,7 @@ body {
 }
 
 .card .lock .not-locked {
-  color: $sc-light-gray;
+  color: $sc-lighter-gray;
 }
 
 .card-title {
@@ -195,9 +190,32 @@ body {
 }
 
 .card-wrapper {
-  border: 1px solid $sc-light-gray;
+  border: 1px solid $sc-lighter-gray;
 }
 
 .card-wrapper img {
   width: 100%;
+}
+
+.charity {
+  @media (max-width: $width-sm - 1) {
+    width: (100%);
+  }
+
+  @media (min-width: $width-sm) {
+    width: (100% / 2);
+  }
+
+  @media (min-width: $width-md) {
+    width: (100% / 3);
+  }
+
+  @media (min-width: $width-lg) {
+    width: (100% / 3);
+  }
+}
+
+.footer {
+  font-size: $sc-card-font-size;
+  color: $sc-light-gray;
 }

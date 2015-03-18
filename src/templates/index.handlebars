@@ -70,13 +70,42 @@
       </ul>
     </div>
 
-    <h1>charities</h1>
+    <div id="charities" class="container artists-and-charities">
+      <p class="section-title">Learn about the charities:</p>
+      <p class="section-body">{{ charitiesDescription }}</p>
+        
+      <ul class="card-list">
+        {{#each charities}}
+        <li class="card charity">
+          <div class="card-wrapper">
+            <img src="{{ image }}"
+                 alt="{{ name }}">
+            <div class="card-text">
+              <p class="card-title">{{ name }}</p>
+              <p class="card-body">{{{ description }}}</p>
+            </div>
+          </div>
+        </li>
+
+        {{/each}}
+      </ul>
+    </div>
     
     <h1>stats - react</h1>
     
     <h1>form - react</h1>
     
-    <h1>footer</h1>
+    <div class="container footer">
+      <p>
+        Stereo Cause
+        &nbsp;&nbsp;/&nbsp;&nbsp;
+        Feito com <i class="fa fa-heart"></i> no Rio e em Miami
+        &nbsp;&nbsp;/&nbsp;&nbsp;
+        Made with <i class="fa fa-heart"></i> in Rio and Miami
+        &nbsp;&nbsp;/&nbsp;&nbsp;
+        <i class="fa fa-copyright"></i>&nbsp;2015
+      </p>
+    </div>
   
   </body>
 </html>
