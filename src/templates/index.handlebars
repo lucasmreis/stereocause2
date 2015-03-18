@@ -24,20 +24,30 @@
 
     <div id="artists" class="container artists-and-charities">
       <p class="section-title">Meet the artists:</p>
-      <p class="section-body">{{ cause.artistsDescription }}</p>
-  
+      <p class="section-body">{{ artistsDescription }}</p>
+        
+      <ul class="card-list">
         {{#each albums}}
-        <div class="card">
-          <img ng-src={{ coverImage }}
-               alt="{{ name }}">
-          <div class="card-text">
-            <p class="card-title">{{ name }}</p>
-            <p class="card-body">{{ artist }}</p>
-            <p><i class="fa fa-unlock-alt"></i></p>
+        <li class="card">
+          <div class="card-wrapper">
+            <img src="{{ coverImage }}"
+                 alt="{{ name }}">
+            <div class="card-text">
+              <p class="card-title">{{ name }}</p>
+              <p class="card-body">{{ artist }}</p>
+              <p class="lock">
+                {{#if premium}}
+                  <i class="fa fa-lock locked"></i>
+                {{else}}
+                  <i class="fa fa-unlock-alt not-locked"></i>
+                {{/if}}
+              </p>
+            </div>
           </div>
-        </div>
+        </li>
 
         {{/each}}
+      </ul>
     </div>
 
     <h1>charities</h1>

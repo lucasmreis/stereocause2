@@ -2,7 +2,12 @@ var gulp = require('gulp');
 var handlebars = require('gulp-compile-handlebars');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
- 
+
+gulp.task('assets', function() {
+  return gulp.src('src/assets/**/*.*')
+    .pipe(gulp.dest('dist/assets'));
+});
+
 gulp.task('styles', function() {
   return gulp.src('src/styles/*.scss')
     .pipe(sass())
@@ -18,7 +23,7 @@ gulp.task('template-index', function () {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['template-index', 'styles']);
+gulp.task('default', ['template-index', 'styles', 'assets']);
 
 gulp.task('watch', function () {
   gulp.watch('src/**/*.*', ['default']);
