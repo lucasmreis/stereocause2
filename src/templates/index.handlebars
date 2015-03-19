@@ -51,9 +51,10 @@
         <img src="assets/images/{{ artistImage }}"
              alt="{{ artist }}">
         <h1>{{ artist }}</h1>
+        <h1>DECIDIR LAYOUT</h1>
         <p>{{{ bigDescription }}}</p>
         {{#each tracks}}
-        <p>{{ number }} - {{ title }}</p>
+        <p>{{ number }} - {{ title }} <audio src="assets/previews/{{ file }}" controls></audio></p>
         {{/each}}
       </div>
       {{/each}}
@@ -125,19 +126,29 @@
       var toggleDetails = function(id) {
         console.log('STATE:', openDetailState);
 
+        var hide = function(e) {
+          e.style['max-height'] = '0px';
+          e.style['opacity'] = 0;
+          e.style['z-index'] = -100;
+        };
+
+        var show = function(e) {
+          e.style['max-height'] = '30000px';
+          e.style['opacity'] = 1;
+          e.style['z-index'] = 0;
+        };
+
         var elems = document.getElementsByClassName('artist-detail');
+        
         var i = 0;
         for (i = 0; i < elems.length; i++) {
-          elems[i].style['max-height'] = '0px';
-          elems[i].style.opacity = 0;
+          hide(elems[i]);
         }
         if (openDetailState !== id) {
-          document.getElementById(id).style['max-height'] = '30000px';
-          document.getElementById(id).style.opacity = 1;
+          show(document.getElementById(id));
           openDetailState = id;
         } else {
-          document.getElementById(id).style['max-height'] = '0px';
-          document.getElementById(id).style.opacity = 0;
+          hide(document.getElementById(id));
           openDetailState = null;
         }
       };
