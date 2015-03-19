@@ -128,9 +128,11 @@ body {
 }
 
 .artist-detail {
-  -webkit-transition: all 1s ease;
-     -moz-transition: all 1s ease;
-          transition: all 1s ease;
+  -webkit-transition: all .5s ease;
+     -moz-transition: all .5s ease;
+          transition: all .5s ease;
+  position: relative;
+  z-index: -10;
   opacity: 0;
   max-height: 0px;
 }

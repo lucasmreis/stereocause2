@@ -51,6 +51,10 @@
         <img src="assets/images/{{ artistImage }}"
              alt="{{ artist }}">
         <h1>{{ artist }}</h1>
+        <p>{{{ bigDescription }}}</p>
+        {{#each tracks}}
+        <p>{{ number }} - {{ title }}</p>
+        {{/each}}
       </div>
       {{/each}}
 
