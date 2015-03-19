@@ -127,6 +127,18 @@ body {
   margin-bottom: 10px;
 }
 
+.artist-detail {
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+          transition: all 1s ease;
+  opacity: 0;
+  max-height: 0px;
+}
+
+.artist-detail img {
+  width: 100%;
+}
+
 .card-list {
   margin: -10px;
 
