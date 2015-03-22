@@ -26,6 +26,10 @@ body {
   line-height: 1.8em;
 }
 
+strong {
+  font-weight: 700;
+}
+
 .upper-bar {
   font-size: $sc-title-font-size;
   background-color: $sc-blue;

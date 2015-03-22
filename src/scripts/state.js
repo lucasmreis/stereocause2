@@ -4,9 +4,9 @@ var state = new Baobab({
   showing: 'regular', // regular, controlFreak, justBought
   stats: {
     qty: 12,
-    artist: 123.45,
-    charity: 234.56,
-    stereoCause: 345.67
+    artist: 12345,
+    charity: 23456,
+    stereoCause: 34567
   },
   total: {
     value: 1000,
