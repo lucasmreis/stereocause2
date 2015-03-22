@@ -2,7 +2,7 @@
   "name": "stereocause",
   "version": "1.0.0",
   "description": "Stereo Cause lets you discover new music and help important causes by making charitable contributions.",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,10 +24,13 @@
   },
   "homepage": "https://github.com/lucasmreis/stereocause2",
   "devDependencies": {
+    "babelify": "^5.0.4",
+    "browserify": "^9.0.3",
     "gulp": "^3.8.11",
     "gulp-compile-handlebars": "^0.4.4",
     "gulp-rename": "^1.2.0",
-    "gulp-sass": "^1.3.3"
+    "gulp-sass": "^1.3.3",
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
     "baobab": "^0.4.1",

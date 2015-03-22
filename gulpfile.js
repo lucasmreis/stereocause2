@@ -2,6 +2,9 @@ var gulp = require('gulp');
 var handlebars = require('gulp-compile-handlebars');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
+var browserify = require('browserify');
+var babelify = require('babelify');
+var source = require('vinyl-source-stream');
 
 gulp.task('assets', function() {
   return gulp.src('src/assets/**/*.*')
@@ -14,6 +17,18 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('dist/styles'));
 });
 
+gulp.task('scripts', function () {
+  browserify('./src/scripts/index.jsx', {
+    // entries: 'index.jsx',
+    extensions: ['.jsx'],
+    debug: true
+  })
+  .transform(babelify)
+  .bundle()
+  .pipe(source('app.js'))
+  .pipe(gulp.dest('dist'));
+});
+
 gulp.task('template-index', function () {
   var cause = require('./src/cause.json');
 
@@ -23,7 +38,7 @@ gulp.task('template-index', function () {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['template-index', 'styles', 'assets']);
+gulp.task('default', ['template-index', 'styles', 'assets', 'scripts']);
 
 gulp.task('watch', function () {
   gulp.watch('src/**/*.*', ['default']);
