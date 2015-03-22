@@ -10,12 +10,12 @@ var state = new Baobab({
     stereoCause: 34567
   },
   total: {
-    value: 1000,
+    value: 2000,
     customizing: false
   },
   dividing: {
-    artist: 0.33333,
-    stereoCause: 0.33333
+    artist: 0.2,
+    stereoCause: 0.6
   },
   values: {
     artist: 1000,
