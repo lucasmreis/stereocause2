@@ -1,4 +1,5 @@
 import Baobab from 'baobab';
+import ReactAddons from 'react/addons';
 
 var state = new Baobab({
   showing: 'regular', // regular, controlFreak, justBought
@@ -27,6 +28,10 @@ var state = new Baobab({
   number: 1111222233334444,
   expiry: '12/08',
   cvc: '123'
+},
+{
+  mixins: [ReactAddons.PureRenderMixin],
+  shiftReferences: true
 });
 
 export default state;

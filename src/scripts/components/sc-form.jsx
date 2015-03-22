@@ -14,7 +14,10 @@ var T = R.T;
 var ScForm = React.createClass({
   mixins: [State.mixin],
   cursor: ['showing'],
-  render: function() { 
+  render: function() {
+    State.on('update', () => console.log('STATE:', State.get()));
+    console.log('STATE:', State.get());
+
     var show = R.cond(
       [eq('regular'),      K(<RegularForm />)],
       [eq('controlFreak'), K(<ControlFreakForm />)],
