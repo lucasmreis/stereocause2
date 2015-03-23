@@ -14,8 +14,8 @@ var state = new Baobab({
     customizing: false
   },
   dividing: {
-    artist: 0.2,
-    stereoCause: 0.6
+    artist: 1/3,
+    stereoCause: 1/3
   },
   values: {
     artist: 1000,

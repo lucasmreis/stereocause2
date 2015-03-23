@@ -2,7 +2,7 @@ import R from 'ramda';
 import React from 'react';
 
 import State from '../state';
-import { valuesFromTotal } from '../lib/helpers';
+import { money, valuesFromTotal } from '../lib/helpers';
 
 var compose = R.compose;
 var ifElse = R.ifElse;
@@ -19,12 +19,10 @@ var totalSelected = cond(
     [propEq('value', 500),  K(500)],
     [propEq('value', 1000), K(1000)],
     [propEq('value', 2000), K(2000)],
-    [propEq('value', 5000), K(5000)], 
+    [propEq('value', 5000), K(5000)],
     [T, K('customizing')]);
 
 var isCustomValue = compose(eq('customizing'), totalSelected);
-
-var money = x => '$' + String(x / 100);
 
 var isCustomizing = prop('customizing');
 
@@ -51,7 +49,7 @@ var setDividing = compose(
     [eq('artist'),      K({ artist: 0.6, stereoCause: 0.2})],
     [eq('charity'),     K({ artist: 0.2, stereoCause: 0.2})],
     [eq('stereoCause'), K({ artist: 0.2, stereoCause: 0.6})],
-    [eq('equal'),       K({ artist: 0.3333, stereoCause: 0.3333})]));
+    [eq('equal'),       K({ artist: 1/3, stereoCause: 1/3})]));
 
 var setProportions = compose(
   ifElse(
@@ -66,49 +64,58 @@ var TotalAndProportions = React.createClass({
   cursors: {
     total: ['total'],
     dividing: ['dividing']},
-  
+
   onChangeProportions: setProportions,
+
+  onClickTotal: v => () => State.set('total', { customizing: false, value: v }),
+
+  onClickCustomize: () => State.select('total').set('customizing', true),
+
+  onChangeCustomize: e => State.select('total').set('value', e.target.value * 100),
+
+  onBlurCustomize: () => State.select('total').set('customizing', false),
 
   render: function() {
     return <div>
-      <button
-        type="button" 
+      <button onClick={ this.onClickTotal(500) }
+        type="button"
         className="btn-value">
         $5
       </button>
-      <button
-        type="button" 
+      <button onClick={ this.onClickTotal(1000) }
+        type="button"
         className="btn-value">
         $10
       </button>
-      <button
-        type="button" 
+      <button onClick={ this.onClickTotal(2000) }
+        type="button"
         className="btn-value">
         $20
       </button>
-      <button
-        type="button" 
+      <button onClick={ this.onClickTotal(5000) }
+        type="button"
         className="btn-value">
         $50
       </button>
 
-      { 
+      {
         !isCustomizing(this.cursors.total.get()) ?
-        <button
-          type="button" 
+        <button onClick={ this.onClickCustomize }
+          type="button"
           className="btn-customize">
           { isCustomValue(this.cursors.total.get()) ? money(this.cursors.total.get().value) : 'Customize' }
-        </button> : null 
+        </button> : null
       }
-      { 
-        isCustomizing(this.cursors.total.get()) ? 
-        <input
+      {
+        isCustomizing(this.cursors.total.get()) ?
+        <input onChange={ this.onChangeCustomize }
+          onBlur={ this.onBlurCustomize }
           type="text"
-          placeholder="type value here" /> : null 
+          placeholder="type value here" /> : null
       }
 
       <span className="select-container">
-        <select className="select-proportion" 
+        <select className="select-proportion"
                 value={ proportionSelected(this.cursors.dividing.get()) }
                 onChange={ this.onChangeProportions }>
           <option value="equal">In equal parts</option>
@@ -121,10 +128,10 @@ var TotalAndProportions = React.createClass({
       </span>
 
       <p>
-        <i className="fa fa-info-circle"></i> 
-        10.00 to artists,
-        12.60 to charities and 
-        8.80 to Stereo Cause.
+        <i className="fa fa-info-circle"></i>
+        { money(valuesFromTotal(State.get()).artist) } to artists,
+        { money(valuesFromTotal(State.get()).charity) } to charities and
+        { money(valuesFromTotal(State.get()).stereoCause) } to Stereo Cause.
       </p>
     </div>
   }
