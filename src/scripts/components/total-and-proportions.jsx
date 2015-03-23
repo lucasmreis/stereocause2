@@ -2,8 +2,10 @@ import R from 'ramda';
 import React from 'react';
 
 import State from '../state';
+import { valuesFromTotal } from '../lib/helpers';
 
 var compose = R.compose;
+var ifElse = R.ifElse;
 var propEq = R.propEq;
 var cond = R.cond;
 var prop = R.prop;
@@ -38,8 +40,24 @@ var proportionSelected = cond(
   [isStereoCause, K('stereoCause')],
   [T, K('equal')]);
 
-var setProportions = x => compose(
-  R.identity, // FAZER COND
+var setControlFreak = () => {
+  State.set('values', valuesFromTotal(State.get()));
+  State.set('showing', 'controlFreak');
+};
+
+var setDividing = compose(
+  x => State.set('dividing', x),
+  cond(
+    [eq('artist'),      K({ artist: 0.6, stereoCause: 0.2})],
+    [eq('charity'),     K({ artist: 0.2, stereoCause: 0.2})],
+    [eq('stereoCause'), K({ artist: 0.2, stereoCause: 0.6})],
+    [eq('equal'),       K({ artist: 0.3333, stereoCause: 0.3333})]));
+
+var setProportions = compose(
+  ifElse(
+    eq('controlFreak'),
+      setControlFreak,
+      setDividing),
   prop('value'),
   prop('target'));
 
@@ -48,6 +66,9 @@ var TotalAndProportions = React.createClass({
   cursors: {
     total: ['total'],
     dividing: ['dividing']},
+  
+  onChangeProportions: setProportions,
+
   render: function() {
     return <div>
       <button
@@ -89,7 +110,7 @@ var TotalAndProportions = React.createClass({
       <span className="select-container">
         <select className="select-proportion" 
                 value={ proportionSelected(this.cursors.dividing.get()) }
-                onChange={ setProportions }>
+                onChange={ this.onChangeProportions }>
           <option value="equal">In equal parts</option>
           <option value="artist">Giving more to Artists</option>
           <option value="charity">Giving more to Charities</option>

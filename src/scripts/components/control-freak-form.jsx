@@ -2,7 +2,7 @@ import React from 'react';
 
 var ControlFreakForm = React.createClass({
   render: function() {
-    return <p>Control Freak Form</p>
+    return <div><p>Control Freak Form</p></div>
   }
 });
 

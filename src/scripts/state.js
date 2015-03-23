@@ -34,4 +34,6 @@ var state = new Baobab({
   shiftReferences: true
 });
 
+state.on('update', () => console.log('STATE', JSON.stringify(state.get(), null, '  ')));
+
 export default state;
