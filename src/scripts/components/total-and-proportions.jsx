@@ -59,6 +59,8 @@ var setProportions = compose(
   prop('value'),
   prop('target'));
 
+// REACT CLASS
+
 var TotalAndProportions = React.createClass({
   mixins: [State.mixin],
   cursors: {
@@ -129,9 +131,7 @@ var TotalAndProportions = React.createClass({
 
       <p>
         <i className="fa fa-info-circle"></i>
-        { money(valuesFromTotal(State.get()).artist) } to artists,
-        { money(valuesFromTotal(State.get()).charity) } to charities and
-        { money(valuesFromTotal(State.get()).stereoCause) } to Stereo Cause.
+        { money(valuesFromTotal(State.get()).artist) } to artists, { money(valuesFromTotal(State.get()).charity) } to charities and { money(valuesFromTotal(State.get()).stereoCause) } to Stereo Cause.
       </p>
     </div>
   }

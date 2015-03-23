@@ -41,5 +41,5 @@ gulp.task('template-index', function () {
 gulp.task('default', ['template-index', 'styles', 'assets', 'scripts']);
 
 gulp.task('watch', function () {
-  gulp.watch('src/**/*.*', ['default']);
+  gulp.watch('src/**/*.js', ['scripts']);
 });
