@@ -1,8 +1,20 @@
 import React from 'react';
 
+import FormHeader from './form-header';
+import ControlFreakValues from './control-freak-values';
+import EmailAndOptions from './email-and-options';
+import CreditCard from './credit-card';
+import Submit from './submit';
+
 var ControlFreakForm = React.createClass({
   render: function() {
-    return <div><p>Control Freak Form</p></div>
+    return <div>
+      <FormHeader />
+      <ControlFreakValues />
+      <EmailAndOptions />
+      <CreditCard />
+      <Submit />
+    </div>
   }
 });
 
