@@ -14,4 +14,6 @@ var money = x => {
     .replace(/\d(?=(\d{3})+\.)/g, '$&,');
 };
 
-export { money, valuesFromTotal };
+const targetValue = f => x => f(x.target.value);
+
+export { money, valuesFromTotal, targetValue };

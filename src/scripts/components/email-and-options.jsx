@@ -1,8 +1,7 @@
-import R from 'ramda';
 import React from 'react';
 import State from '../state';
 
-const not = R.not;
+import * as EmailActions from '../actions/email-actions';
 
 var EmailAndOptions = React.createClass({
   mixins: [State.mixin],
@@ -12,16 +11,16 @@ var EmailAndOptions = React.createClass({
     shareMyEmail: ['shareMyEmail']
   },
 
-  updateEmail:        e => State.set('email', e.target.value),
-  updateNotifyMe:     e => State.select('notifyMe').apply(not),
-  updateShareMyEmail: e => State.select('shareMyEmail').apply(not),
+  updateEmail: e => EmailActions.updateEmail(State)(e.target.value),
+  updateNotifyMe: EmailActions.updateNotifyMe(State),
+  updateShareMyEmail: EmailActions.updateShareMyEmail(State),
 
   render: function() {
     return <div>
       <span className="input-container">
-        <input value={ this.cursors.email.get() }
-          onChange={ this.updateEmail }
-          type="email" 
+        <input defaultValue={ this.cursors.email.get() }
+          onBlur={ this.updateEmail }
+          type="email"
           className="input-email"
           placeholder="Your Email Address" />
         <i className="fa fa-envelope-o fa-lg input-icon"></i>
@@ -30,7 +29,7 @@ var EmailAndOptions = React.createClass({
       <p>
         <input checked={ this.cursors.notifyMe.get() }
           onChange={ this.updateNotifyMe }
-          type="checkbox" 
+          type="checkbox"
           className="input-checkbox" />
         Yes, notify me of new artists and causes.
       </p>
@@ -38,7 +37,7 @@ var EmailAndOptions = React.createClass({
       <p>
         <input checked={ this.cursors.shareMyEmail.get() }
           onChange={ this.updateShareMyEmail }
-          type="checkbox" 
+          type="checkbox"
           className="input-checkbox" />
         Yes, share my email with artists and causes.
       </p>

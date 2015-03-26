@@ -1,6 +1,10 @@
 import React from 'react';
 import State from '../state';
 
+import * as CreditCardActions from '../actions/credit-card-actions';
+
+const targetValue = f => x => f(x.target.value);
+
 var CreditCard = React.createClass({
   mixins: [State.mixin],
   cursors: {
@@ -9,31 +13,31 @@ var CreditCard = React.createClass({
     cvc: ['cvc']
   },
 
-  updateNumber: x => State.set('number', x.target.value),
-  updateExpiry: x => State.set('expiry', x.target.value),
-  updateCvc:    x => State.set('cvc', x.target.value),
+  updateNumber: targetValue(CreditCardActions.updateNumber(State)),
+  updateExpiry: targetValue(CreditCardActions.updateExpiry(State)),
+  updateCvc:    targetValue(CreditCardActions.updateCvc(State)),
 
   render: function() {
     return <div>
       <span className="input-container">
-        <input value={ this.cursors.number.get() }
-          onChange={ this.updateNumber }
+        <input defaultValue={ this.cursors.number.get() }
+          onBlur={ this.updateNumber }
           className="input-card"
           placeholder="Your Credit Card Number" />
         <i className="fa fa-credit-card fa-lg input-icon"></i>
       </span>
 
       <span className="input-container">
-        <input value={ this.cursors.expiry.get() }
-          onChange={ this.updateExpiry }
+        <input defaultValue={ this.cursors.expiry.get() }
+          onBlur={ this.updateExpiry }
           className="input-expiry"
           placeholder="Expiration" />
         <i className="fa fa-calendar-o fa-lg input-icon"></i>
       </span>
 
       <span className="input-container">
-        <input value={ this.cursors.cvc.get() }
-          onChange={ this.updateCvc }
+        <input defaultValue={ this.cursors.cvc.get() }
+          onBlur={ this.updateCvc }
           className="input-cvc"
           placeholder="Security Code" />
         <i className="fa fa-lock fa-lg input-icon"></i>

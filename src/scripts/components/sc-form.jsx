@@ -14,15 +14,13 @@ var T = R.T;
 var ScForm = React.createClass({
   mixins: [State.mixin],
   cursor: ['showing'],
-  
+
   show: R.cond(
       [eq('regular'),      K(<RegularForm />)],
       [eq('controlFreak'), K(<ControlFreakForm />)],
       [T,                  K(<JustBought />)]),
 
   render: function() {
-    // State.on('update', () => console.log('STATE:', State.get()));
-
     return <div className="container">
       { this.show(this.state.cursor) }
     </div>
