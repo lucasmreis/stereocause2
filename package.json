@@ -36,6 +36,7 @@
     "baobab": "^0.4.1",
     "react": "^0.13.1",
     "react-mask-mixin": "0.0.3",
-    "spots": "^0.4.0"
+    "spots": "^0.4.0",
+    "stripe": "^3.3.2"
   }
 }

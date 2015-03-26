@@ -12,15 +12,17 @@ var K = R.always;
 var eq = R.eq;
 var T = R.T;
 
-var isArtist      = d => d.artist === 0.6 && d.stereoCause === 0.2;
-var isCharity     = d => d.artist === 0.2 && d.stereoCause === 0.2;
-var isStereoCause = d => d.artist === 0.2 && d.stereoCause === 0.6;
+var isControlFreak = s => s.select('showing').get() === 'controlFreak';
+var isArtist       = s => { const d = s.select('dividing').get(); return d.artist === 0.6 && d.stereoCause === 0.2; };
+var isCharity      = s => { const d = s.select('dividing').get(); return d.artist === 0.2 && d.stereoCause === 0.2; };
+var isStereoCause  = s => { const d = s.select('dividing').get(); return d.artist === 0.2 && d.stereoCause === 0.6; };
 
 var proportionSelected = cond(
-  [isArtist,      K('artist')],
-  [isCharity,     K('charity')],
-  [isStereoCause, K('stereoCause')],
-  [T,             K('equal')]);
+  [isControlFreak, K('controlFreak')],
+  [isArtist,       K('artist')],
+  [isCharity,      K('charity')],
+  [isStereoCause,  K('stereoCause')],
+  [T,              K('equal')]);
 
 var setControlFreak = () => {
   State.set('values', valuesFromTotal(State.get()));
@@ -28,7 +30,8 @@ var setControlFreak = () => {
 };
 
 var setDividing = compose(
-  x => State.set('dividing', x),
+  () => State.set('showing', 'regular'),
+  x  => State.set('dividing', x),
   cond(
     [eq('artist'),      K({ artist: 0.6, stereoCause: 0.2})],
     [eq('charity'),     K({ artist: 0.2, stereoCause: 0.2})],
@@ -44,15 +47,13 @@ var setProportions = compose(
   prop('target'));
 
 var DividingOptions = React.createClass({
-  mixins: [State.mixin],
-  cursor: ['dividing'],
 
   onChangeProportions: setProportions,
 
   render: function() {
     return <span className="select-container">
       <select className="select-proportion"
-              value={ proportionSelected(this.state.cursor) }
+              value={ proportionSelected(State) }
               onChange={ this.onChangeProportions }>
         <option value="equal">In equal parts</option>
         <option value="artist">Giving more to Artists</option>
