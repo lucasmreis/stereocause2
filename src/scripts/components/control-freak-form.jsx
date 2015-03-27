@@ -10,10 +10,12 @@ var ControlFreakForm = React.createClass({
   render: function() {
     return <div>
       <FormHeader />
-      <ControlFreakValues />
-      <EmailAndOptions />
-      <CreditCard />
-      <Submit />
+      <div className="form-container">
+        <ControlFreakValues />
+        <EmailAndOptions />
+        <CreditCard />
+        <Submit />
+      </div>
     </div>
   }
 });

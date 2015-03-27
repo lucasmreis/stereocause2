@@ -10,10 +10,12 @@ var RegularForm = React.createClass({
   render: function() {
     return <div>
       <FormHeader />
-      <TotalAndProportions />
-      <EmailAndOptions />
-      <CreditCard />
-      <Submit />
+      <div className="form-container">
+        <TotalAndProportions />
+        <EmailAndOptions />
+        <CreditCard />
+        <Submit />
+      </div>
     </div>
   }
 });

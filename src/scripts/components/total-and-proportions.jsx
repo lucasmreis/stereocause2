@@ -39,26 +39,28 @@ var TotalAndProportions = React.createClass({
 
   render: function() {
     return <div>
-      <button onClick={ this.onClickTotal(500) }
-        type="button"
-        className="btn-value">
-        $5
-      </button>
-      <button onClick={ this.onClickTotal(1000) }
-        type="button"
-        className="btn-value">
-        $10
-      </button>
-      <button onClick={ this.onClickTotal(2000) }
-        type="button"
-        className="btn-value">
-        $20
-      </button>
-      <button onClick={ this.onClickTotal(5000) }
-        type="button"
-        className="btn-value">
-        $50
-      </button>
+      <div className="btn-value-container">
+        <button onClick={ this.onClickTotal(500) }
+          type="button"
+          className="btn-value">
+          $5
+        </button>
+        <button onClick={ this.onClickTotal(1000) }
+          type="button"
+          className="btn-value">
+          $10
+        </button>
+        <button onClick={ this.onClickTotal(2000) }
+          type="button"
+          className="btn-value">
+          $20
+        </button>
+        <button onClick={ this.onClickTotal(5000) }
+          type="button"
+          className="btn-value">
+          $50
+        </button>
+      </div>
 
       {
         !isCustomizing(this.state.cursor) ?
