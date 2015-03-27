@@ -3,7 +3,7 @@ import State from '../state';
 
 import {requestStripe} from '../lib/helpers';
 
-var contribute = (x, y) => console.log('STRIPE TOKEN', x, y);
+var contribute = (x, y) => console.log('STRIPE TOKEN', x, JSON.stringify(y, null, '  '));
 
 var Submit = React.createClass({
   mixins: [State.mixin],

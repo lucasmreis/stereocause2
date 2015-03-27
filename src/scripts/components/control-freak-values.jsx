@@ -39,7 +39,7 @@ var ControlFreakValues = React.createClass({
         <div className="label-custom-value">
           to artists
         </div>
-        <input defaultValue={ this.cursors.artist.get() / 100 }
+        <input defaultValue={ (this.cursors.artist.get() / 100).toFixed(2).toString() }
                onBlur={ this.updateArtist }
                value={ this.state.artist }
                onChange={ this.handleChange('artist', true) }
@@ -54,7 +54,7 @@ var ControlFreakValues = React.createClass({
         <div className="label-custom-value">
           to charities
         </div>
-        <input defaultValue={ this.cursors.charity.get() / 100 }
+        <input defaultValue={ (this.cursors.charity.get() / 100).toFixed(2).toString() }
                onBlur={ this.updateCharity }
                value={ this.state.charity }
                onChange={ this.handleChange('charity', true) }
@@ -69,7 +69,7 @@ var ControlFreakValues = React.createClass({
         <div className="label-custom-value">
           to Stereo Cause
         </div>
-        <input defaultValue={ this.cursors.stereoCause.get() / 100 }
+        <input defaultValue={ (this.cursors.stereoCause.get() / 100).toFixed(2).toString() }
                onBlur={ this.updateStereoCause }
                value={ this.state.stereoCause }
                onChange={ this.handleChange('stereoCause', true) }

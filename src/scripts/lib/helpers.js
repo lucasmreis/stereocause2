@@ -18,7 +18,7 @@ export const targetValue = f => x => f(x.target.value);
 
 export const requestStripe = state => {
   return {
-    number: state.number.replace(' ', ''),
+    number: state.number.replace(/ /g, ''),
     cvc: state.cvc,
     exp_month: state.expiry.split('/')[0],
     exp_year: state.expiry.split('/')[1]
