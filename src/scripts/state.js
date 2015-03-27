@@ -3,6 +3,7 @@ import ReactAddons from 'react/addons';
 
 var state = new Baobab({
   showing: 'regular', // regular, controlFreak, justBought
+  submitCaption: 'Contribute!', // Contribute! , Validating card... , Contributing...
   stats: {
     qty: 12,
     artist: 12345,
@@ -25,8 +26,8 @@ var state = new Baobab({
   email: 'bla@bla.com',
   notifyMe: true,
   shareMyEmail: false,
-  number: 1111222233334444,
-  expiry: '12/08',
+  number: '4242 4242 4242 4242',
+  expiry: '12/18',
   cvc: '123'
 },
 {

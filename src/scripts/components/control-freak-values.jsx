@@ -24,7 +24,6 @@ var ControlFreakValues = React.createClass({
     return function(x) {
       var c = {};
       c[field] = targetValue ? x.target.value : x;
-      console.log('STATE', field, targetValue, c);
       self.setState(c);
     };
   },
