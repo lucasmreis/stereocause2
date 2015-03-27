@@ -9,7 +9,7 @@ export const updateArtist = state => x => {
   const oldValues = state.select('values').get();
   state.select('values').set('artist', newValue);
   state.select('total').set('value', newValue + oldValues.charity + oldValues.stereoCause);
-  return newValue / 100;
+  return (newValue / 100).toFixed(2).toString();
 }
 
 export const updateCharity = state => x => {

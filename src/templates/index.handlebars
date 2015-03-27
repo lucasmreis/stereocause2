@@ -7,7 +7,7 @@
     <title>Stereo Cause</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    
+
     <!-- Styles -->
     <link href="styles/reset.css" rel="stylesheet" type="text/css">
     <link href="styles/style.css" rel="stylesheet" type="text/css">
@@ -24,16 +24,16 @@
         <a href="#"><i class="fa fa-dot-circle-o"></i></a>
       </div>
     </div>
-    
+
     <div class="title">
       <h1>NEW MUSIC <span class="and">&</span> GREAT CAUSES</h1>
 
-      <h2>Stereo Cause lets you discover 
-        <a class="title-link" 
-           href="#artists">new music</a> and help 
-        <a class="title-link" 
-           href="#charities">important causes</a> by making 
-        <a class="title-link" 
+      <h2>Stereo Cause lets you discover
+        <a class="title-link"
+           href="#artists">new music</a> and help
+        <a class="title-link"
+           href="#charities">important causes</a> by making
+        <a class="title-link"
            href="#contribute">charitable contributions</a>.
       </h2>
 
@@ -45,7 +45,7 @@
     <div id="artists" class="container artists-and-charities">
       <p class="section-title">Meet the artists:</p>
       <p class="section-body">{{ artistsDescription }}</p>
-      
+
       {{#each albums}}
       <div class="artist-detail" id="{{ id }}">
         <img src="assets/images/{{ artistImage }}"
@@ -86,7 +86,7 @@
     <div id="charities" class="container artists-and-charities">
       <p class="section-title">Learn about the charities:</p>
       <p class="section-body">{{ charitiesDescription }}</p>
-        
+
       <ul class="card-list">
         {{#each charities}}
         <li class="card charity">
@@ -103,9 +103,9 @@
         {{/each}}
       </ul>
     </div>
-    
+
     <div id="sc-form"></div>
-    
+
     <div class="container footer">
       <p>
         Stereo Cause
@@ -117,7 +117,7 @@
         <i class="fa fa-copyright"></i>&nbsp;2015
       </p>
     </div>
-  
+
     <script>
       var openDetailState = null;
 
@@ -135,7 +135,7 @@
         };
 
         var elems = document.getElementsByClassName('artist-detail');
-        
+
         var i = 0;
         for (i = 0; i < elems.length; i++) {
           hide(elems[i]);
@@ -150,6 +150,8 @@
       };
     </script>
 
+
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
     <script type="text/javascript" src="app.js"></script>
   </body>
 </html>

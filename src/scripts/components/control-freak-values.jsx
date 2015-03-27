@@ -15,9 +15,19 @@ var ControlFreakValues = React.createClass({
     stereoCause: ['values', 'stereoCause']
   },
 
-  updateArtist: targetValue(ValuesActions.updateArtist(State)),
-  updateCharity: targetValue(ValuesActions.updateCharity(State)),
-  updateStereoCause: targetValue(ValuesActions.updateStereoCause(State)),
+  updateArtist: function(x) { this.handleChange('artist')(ValuesActions.updateArtist(State)(x.target.value)) },
+  updateCharity: function(x) { this.handleChange('charity')(ValuesActions.updateCharity(State)(x.target.value)) },
+  updateStereoCause: function(x) { this.handleChange('stereoCause')(ValuesActions.updateStereoCause(State)(x.target.value)) },
+
+  handleChange: function(field, targetValue) {
+    var self = this;
+    return function(x) {
+      var c = {};
+      c[field] = targetValue ? x.target.value : x;
+      console.log('STATE', field, targetValue, c);
+      self.setState(c);
+    };
+  },
 
   render: function() {
     return <div>
@@ -32,6 +42,8 @@ var ControlFreakValues = React.createClass({
         </div>
         <input defaultValue={ this.cursors.artist.get() / 100 }
                onBlur={ this.updateArtist }
+               value={ this.state.artist }
+               onChange={ this.handleChange('artist', true) }
                type="text"
                className="input-custom-value" />
       </div>
@@ -45,6 +57,8 @@ var ControlFreakValues = React.createClass({
         </div>
         <input defaultValue={ this.cursors.charity.get() / 100 }
                onBlur={ this.updateCharity }
+               value={ this.state.charity }
+               onChange={ this.handleChange('charity', true) }
                type="text"
                className="input-custom-value" />
       </div>
@@ -58,6 +72,8 @@ var ControlFreakValues = React.createClass({
         </div>
         <input defaultValue={ this.cursors.stereoCause.get() / 100 }
                onBlur={ this.updateStereoCause }
+               value={ this.state.stereoCause }
+               onChange={ this.handleChange('stereoCause', true) }
                type="text"
                className="input-custom-value" />
       </div>
