@@ -1,5 +1,3 @@
-@import 'form';
-
 $sc-font-family: 'Montserrat', sans-serif;
 $sc-title-font-size: 24px;
 $sc-body-font-size: 22px;
@@ -8,6 +6,8 @@ $sc-card-font-size: 14px;
 $sc-bigtitle-large-font-size: 58px;
 $sc-bigtitle-small-font-size: 32px;
 
+$sc-form-font-size: 16px;
+
 $sc-dark-gray: #333;
 $sc-medium-gray: #777;
 $sc-light-gray: #bbb;
@@ -15,6 +15,7 @@ $sc-lighter-gray: #eee;
 
 $sc-blue: #03a9f4;
 $sc-light-blue: #b3e5fc;
+$sc-dark-blue: #0288d1;
 
 $width-sm: 768px;
 $width-md: 992px;
@@ -22,6 +23,13 @@ $width-lg: 1200px;
 
 $container-width: 1000px;
 $upper-bar-height: 50px;
+
+$elem-height: 50px;
+$form-container-width: 430px;
+$elem-width-small: 100px;
+$elem-margin: 5px;
+$elem-width-large: $elem-width-small * 2 + $elem-margin * 2;
+$elem-width-x-large: $elem-width-small * 4 + $elem-margin * 6;
 
 body {
   font-family: $sc-font-family;
@@ -238,4 +246,80 @@ strong {
 .footer {
   font-size: $sc-card-font-size;
   color: $sc-light-gray;
+}
+
+// FORM
+
+.form-container {
+  width: $form-container-width;
+  margin: auto;
+}
+
+.btn-value-container {
+  margin: 0 -5px;
+}
+
+.btn {
+  font-family: $sc-font-family;
+  font-size: $sc-form-font-size;
+  color: $sc-medium-gray;
+  box-sizing: border-box;
+  height: $elem-height;
+  margin: $elem-margin;
+  background-color: transparent;
+  border: 1px solid $sc-lighter-gray;
+}
+
+.btn-selected {
+  border: 0px solid $sc-lighter-gray;
+  background-color: $sc-light-blue;
+  color: $sc-dark-blue;
+}
+
+.btn-value {
+  width: $elem-width-small;
+}
+
+.btn-customize {
+  width: $elem-width-large;
+}
+
+.input-container {
+  position: relative;
+}
+
+.icon-input {
+  color: $sc-medium-gray;
+  position: absolute;
+  top: 2px;
+  left: 15px;
+}
+
+.input-sc {
+  font-family: $sc-font-family;
+  font-size: $sc-form-font-size;
+  color: $sc-medium-gray;
+  box-sizing: border-box;
+  height: $elem-height;
+  margin: $elem-margin;
+  background-color: transparent;
+  border: 1px solid $sc-lighter-gray;
+  padding-left: 10px;
+  width: $elem-width-large;
+}
+
+.form-text {
+  color: $sc-medium-gray;
+}
+
+.input-large {
+  width: $elem-width-x-large;
+}
+
+.input-email {
+  margin: 0;
+}
+
+.input-with-icon {
+  padding-left: 45px;
 }

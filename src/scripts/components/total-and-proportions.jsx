@@ -1,29 +1,9 @@
-import R from 'ramda';
 import React from 'react';
 
 import State from '../state';
-import { money, valuesFromTotal } from '../lib/helpers';
+import { money, valuesFromTotal, totalSelected, isCustomValue, isCustomizing, isSelected } from '../lib/helpers';
 
 import DividingOptions from './dividing-options';
-
-var compose = R.compose;
-var propEq = R.propEq;
-var cond = R.cond;
-var prop = R.prop;
-var K = R.always;
-var eq = R.eq;
-var T = R.T;
-
-var totalSelected = cond(
-    [propEq('value', 500),  K(500)],
-    [propEq('value', 1000), K(1000)],
-    [propEq('value', 2000), K(2000)],
-    [propEq('value', 5000), K(5000)],
-    [T, K('customizing')]);
-
-var isCustomValue = compose(eq('customizing'), totalSelected);
-
-var isCustomizing = prop('customizing');
 
 var TotalAndProportions = React.createClass({
   mixins: [State.mixin],
@@ -37,52 +17,54 @@ var TotalAndProportions = React.createClass({
 
   onBlurCustomize: () => State.select('total').set('customizing', false),
 
+  btnClass: total => v => defaultClass => isSelected(v)(total) ? defaultClass + ' btn-selected' : defaultClass,
+
   render: function() {
     return <div>
       <div className="btn-value-container">
         <button onClick={ this.onClickTotal(500) }
           type="button"
-          className="btn-value">
+          className={ this.btnClass(this.state.cursor)(500)('btn btn-value') }>
           $5
         </button>
         <button onClick={ this.onClickTotal(1000) }
           type="button"
-          className="btn-value">
+          className={ this.btnClass(this.state.cursor)(1000)('btn btn-value') }>
           $10
         </button>
         <button onClick={ this.onClickTotal(2000) }
           type="button"
-          className="btn-value">
+          className={ this.btnClass(this.state.cursor)(2000)('btn btn-value') }>
           $20
         </button>
         <button onClick={ this.onClickTotal(5000) }
           type="button"
-          className="btn-value">
+          className={ this.btnClass(this.state.cursor)(5000)('btn btn-value') }>
           $50
         </button>
-      </div>
 
-      {
-        !isCustomizing(this.state.cursor) ?
-        <button onClick={ this.onClickCustomize }
-          type="button"
-          className="btn-customize">
-          { isCustomValue(this.state.cursor) ? money(this.state.cursor.value) : 'Customize' }
-        </button> : null
-      }
-      {
-        isCustomizing(this.state.cursor) ?
-        <input onChange={ this.onChangeCustomize }
-          onBlur={ this.onBlurCustomize }
-          type="text"
-          placeholder="type value here" /> : null
-      }
+        {
+          !isCustomizing(this.state.cursor) ?
+          <button onClick={ this.onClickCustomize }
+            type="button"
+            className={ this.btnClass(this.state.cursor)('customizing')('btn btn-customize') }>
+            { isCustomValue(this.state.cursor) ? money(this.state.cursor.value) : 'Customize' }
+          </button> : null
+        }
+        {
+          isCustomizing(this.state.cursor) ?
+          <input onChange={ this.onChangeCustomize }
+            onBlur={ this.onBlurCustomize }
+            type="text"
+            className="input-sc"
+            placeholder="type value here" /> : null
+        }
+      </div>
 
       <DividingOptions />
 
-      <p>
-        <i className="fa fa-info-circle"></i>
-        { money(valuesFromTotal(State.get()).artist) } to artists, { money(valuesFromTotal(State.get()).charity) } to charities and { money(valuesFromTotal(State.get()).stereoCause) } to Stereo Cause.
+      <p className="form-text">
+        <i className="fa fa-info-circle"></i> { money(valuesFromTotal(State.get()).artist) } to artists, { money(valuesFromTotal(State.get()).charity) } to charities and { money(valuesFromTotal(State.get()).stereoCause) } to Stereo Cause.
       </p>
     </div>
   }

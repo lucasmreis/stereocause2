@@ -21,9 +21,9 @@ var EmailAndOptions = React.createClass({
         <input defaultValue={ this.cursors.email.get() }
           onBlur={ this.updateEmail }
           type="email"
-          className="input-email"
+          className="input-sc input-large input-with-icon input-email"
           placeholder="Your Email Address" />
-        <i className="fa fa-envelope-o fa-lg input-icon"></i>
+        <i className="fa fa-envelope-o fa-lg icon-input"></i>
       </span>
 
       <p>
