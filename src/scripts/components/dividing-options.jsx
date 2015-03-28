@@ -52,7 +52,7 @@ var DividingOptions = React.createClass({
 
   render: function() {
     return <span className="select-container">
-      <select className="select-proportion"
+      <select className="select-form"
               value={ proportionSelected(State) }
               onChange={ this.onChangeProportions }>
         <option value="equal">In equal parts</option>
@@ -61,7 +61,7 @@ var DividingOptions = React.createClass({
         <option value="stereoCause">Giving more to StereoCause</option>
         <option value="controlFreak">{ "I'm a Control Freak!" }</option>
       </select>
-      <i className="fa fa-chevron-down fa-lg select-icon"></i>
+      <i className="fa fa-chevron-down fa-lg icon-select"></i>
     </span>
   }
 });

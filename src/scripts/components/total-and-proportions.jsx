@@ -59,9 +59,9 @@ var TotalAndProportions = React.createClass({
             className="input-sc"
             placeholder="type value here" /> : null
         }
-      </div>
 
-      <DividingOptions />
+        <DividingOptions />
+      </div>
 
       <p className="form-text">
         <i className="fa fa-info-circle"></i> { money(valuesFromTotal(State.get()).artist) } to artists, { money(valuesFromTotal(State.get()).charity) } to charities and { money(valuesFromTotal(State.get()).stereoCause) } to Stereo Cause.

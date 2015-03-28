@@ -260,6 +260,7 @@ strong {
 }
 
 .btn {
+  cursor: pointer;
   font-family: $sc-font-family;
   font-size: $sc-form-font-size;
   color: $sc-medium-gray;
@@ -310,6 +311,7 @@ strong {
 
 .form-text {
   color: $sc-medium-gray;
+  font-size: $sc-card-font-size;
 }
 
 .input-large {
@@ -322,4 +324,33 @@ strong {
 
 .input-with-icon {
   padding-left: 45px;
+}
+
+.select-container {
+  position: relative;
+}
+
+.select-form {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  height: $elem-height;
+  width: $elem-width-large;
+  padding-left: 10px;
+  font-family: $sc-font-family;
+  font-size: $sc-form-font-size;
+  color: $sc-medium-gray;
+  box-sizing: border-box;
+  border: 1px solid $sc-lighter-gray;
+  border-radius: 0;
+  margin: $elem-margin;
+}
+
+.icon-select {
+  color: $sc-medium-gray;
+  position: absolute;
+  top: 2px;
+  right: 15px;
+  z-index: -10;
 }
