@@ -25,15 +25,15 @@ var CreditCard = React.createClass({
   changeExpiry: function(x) { this.setState({ expiry: formatExpiry(x.target.value) }) },
 
   render: function() {
-    return <div>
+    return <div className="btn-value-container">
       <span className="input-container">
         <input defaultValue={ formatNumber(this.cursors.number.get()) }
           onBlur={ this.updateNumber }
           value={ this.state.number }
           onChange={ this.changeNumber }
-          className="input-card"
+          className="input-sc input-large input-with-icon input-card"
           placeholder="Your Credit Card Number" />
-        <i className="fa fa-credit-card fa-lg input-icon"></i>
+        <i className="fa fa-credit-card fa-lg icon-input-with-padding"></i>
       </span>
 
       <span className="input-container">
@@ -41,17 +41,17 @@ var CreditCard = React.createClass({
           onBlur={ this.updateExpiry }
           value={ this.state.expiry }
           onChange={ this.changeExpiry }
-          className="input-expiry"
+          className="input-sc input-with-icon input-expiry"
           placeholder="Expiration" />
-        <i className="fa fa-calendar-o fa-lg input-icon"></i>
+        <i className="fa fa-calendar-o fa-lg icon-input-with-padding"></i>
       </span>
 
       <span className="input-container">
         <input defaultValue={ this.cursors.cvc.get() }
           onBlur={ this.updateCvc }
-          className="input-cvc"
+          className="input-sc input-with-icon input-cvc"
           placeholder="Security Code" />
-        <i className="fa fa-lock fa-lg input-icon"></i>
+        <i className="fa fa-lock fa-lg icon-input-with-padding"></i>
       </span>
     </div>
   }

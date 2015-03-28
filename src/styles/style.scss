@@ -296,6 +296,13 @@ strong {
   left: 15px;
 }
 
+.icon-input-with-padding {
+  color: $sc-medium-gray;
+  position: absolute;
+  top: 2px;
+  left: 20px;
+}
+
 .input-sc {
   font-family: $sc-font-family;
   font-size: $sc-form-font-size;
@@ -312,6 +319,7 @@ strong {
 .form-text {
   color: $sc-medium-gray;
   font-size: $sc-card-font-size;
+  margin: 10px 0px;
 }
 
 .input-large {

@@ -26,7 +26,7 @@ var EmailAndOptions = React.createClass({
         <i className="fa fa-envelope-o fa-lg icon-input"></i>
       </span>
 
-      <p>
+      <p className="form-text">
         <input checked={ this.cursors.notifyMe.get() }
           onChange={ this.updateNotifyMe }
           type="checkbox"
@@ -34,7 +34,7 @@ var EmailAndOptions = React.createClass({
         Yes, notify me of new artists and causes.
       </p>
 
-      <p>
+      <p className="form-text">
         <input checked={ this.cursors.shareMyEmail.get() }
           onChange={ this.updateShareMyEmail }
           type="checkbox"
