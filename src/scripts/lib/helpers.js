@@ -5,6 +5,7 @@ const propEq = R.propEq;
 const cond = R.cond;
 const prop = R.prop;
 const K = R.always;
+const complement = R.complement;
 const eq = R.eq;
 const T = R.T;
 
@@ -51,3 +52,5 @@ export const isSelected = v => compose(eq(v), totalSelected); // state.total, va
 export const isCustomValue = isSelected('customizing'); // state.total
 
 export const isCustomizing = prop('customizing'); // state.total
+
+export const isLoading = complement(eq('Contribute!')); // state.submitCaption

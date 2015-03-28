@@ -1,19 +1,25 @@
 import React from 'react';
 import State from '../state';
 
-import {requestStripe} from '../lib/helpers';
+import * as SubmitActions from '../actions/submit-actions';
 
-var contribute = (x, y) => console.log('STRIPE TOKEN', x, JSON.stringify(y, null, '  '));
+import {requestStripe, isLoading} from '../lib/helpers';
 
 var Submit = React.createClass({
   mixins: [State.mixin],
   cursor: ['submitCaption'],
 
-  contribute: () => Stripe.card.createToken(requestStripe(State.get()), contribute),
+  contribute: SubmitActions.contribute,
+
+  submitClass: s => isLoading(s) ? "btn btn-submit btn-loading" : "btn btn-submit",
+
+  isLoading: s => isLoading(s) ? <i className="fa fa-circle-o-notch fa-spin"></i> : null,
 
   render: function() {
-    return <a className="submit-btn"
-              onClick={ this.contribute }>{ this.state.cursor }</a>
+    return <button className={ this.submitClass(this.state.cursor) }
+      onClick={ this.contribute }>
+      { this.state.cursor } { this.isLoading(this.state.cursor) }
+    </button>
   }
 });
 

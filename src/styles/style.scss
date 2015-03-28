@@ -34,6 +34,8 @@ $elem-width-x-large: $elem-width-small * 4 + $elem-margin * 6;
 body {
   font-family: $sc-font-family;
   line-height: 1.8em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 strong {
@@ -361,4 +363,17 @@ strong {
   top: 2px;
   right: 15px;
   z-index: -10;
+}
+
+.btn-submit {
+  margin: $elem-margin 0px;
+  width: $elem-width-x-large;
+  border-width: 0px;
+  background-color: $sc-blue;
+  color: white;
+}
+
+.btn-loading {
+  background-color: $sc-light-blue;
+  color: $sc-dark-blue;
 }
