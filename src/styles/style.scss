@@ -445,3 +445,81 @@ strong {
   right: 15px;
   z-index: -10;
 }
+
+// ARTIST DETAILS
+
+.lightbox-hide {
+  display: none;
+}
+
+.lightbox-show {
+  display: block;
+}
+
+.lightbox-bg {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+}
+
+.lightbox {
+  overflow-y: scroll;
+  z-index: 200;
+  width: 90%;
+  height: 90%;
+  background: white;
+  border: 1px solid $sc-lighter-gray;
+  margin: 30px auto;
+}
+
+.lightbox-header {
+  position: relative;
+  padding: 10px;
+  border-bottom: 1px solid $sc-lighter-gray;
+}
+
+.lightbox-header-title {
+  font-size: $sc-title-font-size;
+}
+
+.lightbox-close {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  color: $sc-light-gray;
+}
+
+.lightbox-artist-img {
+  width: 100%;
+}
+
+.lightbox-body {
+  padding: 10px;
+}
+
+.lightbox-footer {
+  position: relative;
+  padding: 10px;
+  border-top: 1px solid $sc-lighter-gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,6 +2,10 @@ import Baobab from 'baobab';
 import ReactAddons from 'react/addons';
 
 var state = new Baobab({
+  artistDetails: {
+    showing: true,
+    current: 'aventureira'
+  },
   showing: 'regular', // regular, controlFreak, justBought
   submitCaption: 'Contribute!', // Contribute! , Validating card... , Contributing...
   stats: {
