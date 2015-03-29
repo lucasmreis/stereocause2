@@ -48,33 +48,33 @@ var ControlFreakValues = React.createClass({
         </div>
 
         <div className="input-container">
-          <div className="label-custom-left">
-            contribute $
-          </div>
-          <div className="label-custom-right">
-            to charities
-          </div>
           <input defaultValue={ (this.cursors.charity.get() / 100).toFixed(2).toString() }
                  onBlur={ this.updateCharity }
                  value={ this.state.charity }
                  onChange={ this.handleChange('charity', true) }
                  type="text"
                  className="input-sc input-custom" />
-        </div>
-
-        <div className="input-container">
           <div className="label-custom-left">
             contribute $
           </div>
           <div className="label-custom-right">
-            to Stereo Cause
+            to charities
           </div>
+        </div>
+
+        <div className="input-container">
           <input defaultValue={ (this.cursors.stereoCause.get() / 100).toFixed(2).toString() }
                  onBlur={ this.updateStereoCause }
                  value={ this.state.stereoCause }
                  onChange={ this.handleChange('stereoCause', true) }
                  type="text"
                  className="input-sc input-custom" />
+          <div className="label-custom-left">
+            contribute $
+          </div>
+          <div className="label-custom-right">
+            to Stereo Cause
+          </div>
         </div>
       </div>
   }

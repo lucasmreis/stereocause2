@@ -21,7 +21,7 @@ $width-sm: 768px;
 $width-md: 992px;
 $width-lg: 1200px;
 
-$width-form: 470px;
+$width-form: 471px;
 
 $container-width: 1000px;
 $upper-bar-height: 50px;
@@ -260,7 +260,11 @@ strong {
 }
 
 .btn-value-container {
-  margin: 0 -$elem-margin;
+  margin: 0 (-$elem-margin);
+
+  @media (max-width: $width-form) {
+    margin: 0;
+  }
 }
 
 .btn {
@@ -273,10 +277,6 @@ strong {
   margin: $elem-margin;
   background-color: transparent;
   border: 1px solid $sc-lighter-gray;
-
-  @media (max-width: $width-form) {
-    width: 100%;
-  }
 }
 
 .btn-selected {
@@ -287,10 +287,20 @@ strong {
 
 .btn-value {
   width: $elem-width-small;
+
+  @media (max-width: $width-form) {
+    margin: ($elem-margin) (0px);
+    width: 50%;
+  }
 }
 
 .btn-customize {
   width: $elem-width-large;
+
+  @media (max-width: $width-form) {
+    margin: ($elem-margin) (0px);
+    width: 100%;
+  }
 }
 
 .input-container {
@@ -322,6 +332,11 @@ strong {
   border: 1px solid $sc-lighter-gray;
   padding-left: 10px;
   width: $elem-width-large;
+
+  @media (max-width: $width-form) {
+    margin: ($elem-margin) (0px);
+    width: 100%;
+  }
 }
 
 .form-text {
@@ -332,6 +347,10 @@ strong {
 
 .input-large {
   width: $elem-width-x-large;
+
+  @media (max-width: $width-form) {
+    width: 100%;
+  }
 }
 
 .input-email {
@@ -361,6 +380,11 @@ strong {
   border: 1px solid $sc-lighter-gray;
   border-radius: 0;
   margin: $elem-margin;
+
+  @media (max-width: $width-form) {
+    margin: ($elem-margin) (0px);
+    width: 100%;
+  }
 }
 
 .icon-select {
@@ -377,6 +401,10 @@ strong {
   border-width: 0px;
   background-color: $sc-blue;
   color: white;
+
+  @media (max-width: $width-form) {
+    width: 100%;
+  }
 }
 
 .btn-loading {
@@ -385,12 +413,21 @@ strong {
 }
 
 .control-freak-values-container {
-  margin: 0 -$elem-margin $elem-margin -$elem-margin;
+  margin: 0 (-$elem-margin) ($elem-margin) (-$elem-margin);
+
+  @media (max-width: $width-form) {
+    margin: ($elem-margin) 0;
+    width: 0;
+  }
 }
 
 .input-custom {
   width: $elem-width-x-large;
   padding-left: 120px;
+
+  @media (max-width: $width-form) {
+    width: 100%;
+  }
 }
 
 .label-custom-left {
@@ -398,6 +435,7 @@ strong {
   position: absolute;
   top: 17px;
   left: 15px;
+  z-index: -10;
 }
 
 .label-custom-right {
@@ -405,4 +443,5 @@ strong {
   position: absolute;
   top: 17px;
   right: 15px;
+  z-index: -10;
 }
