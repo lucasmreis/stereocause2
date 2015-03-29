@@ -260,7 +260,7 @@ strong {
 }
 
 .btn-value-container {
-  margin: 0 -5px;
+  margin: 0 -$elem-margin;
 }
 
 .btn {
@@ -385,7 +385,7 @@ strong {
 }
 
 .control-freak-values-container {
-  margin: 0 -5px 5px -5px;
+  margin: 0 -$elem-margin $elem-margin -$elem-margin;
 }
 
 .input-custom {
