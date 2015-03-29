@@ -21,6 +21,8 @@ $width-sm: 768px;
 $width-md: 992px;
 $width-lg: 1200px;
 
+$width-form: 470px;
+
 $container-width: 1000px;
 $upper-bar-height: 50px;
 
@@ -253,7 +255,7 @@ strong {
 // FORM
 
 .form-container {
-  width: $form-container-width;
+  max-width: $form-container-width;
   margin: auto;
 }
 
@@ -271,6 +273,10 @@ strong {
   margin: $elem-margin;
   background-color: transparent;
   border: 1px solid $sc-lighter-gray;
+
+  @media (max-width: $width-form) {
+    width: 100%;
+  }
 }
 
 .btn-selected {
@@ -376,4 +382,27 @@ strong {
 .btn-loading {
   background-color: $sc-light-blue;
   color: $sc-dark-blue;
+}
+
+.control-freak-values-container {
+  margin: 0 -5px 5px -5px;
+}
+
+.input-custom {
+  width: $elem-width-x-large;
+  padding-left: 120px;
+}
+
+.label-custom-left {
+  color: $sc-light-gray;
+  position: absolute;
+  top: 17px;
+  left: 15px;
+}
+
+.label-custom-right {
+  color: $sc-light-gray;
+  position: absolute;
+  top: 17px;
+  right: 15px;
 }

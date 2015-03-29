@@ -29,54 +29,54 @@ var ControlFreakValues = React.createClass({
   },
 
   render: function() {
-    return <div>
-      <DividingOptions />
+    return <div className="control-freak-values-container">
+        <DividingOptions />
 
-      <div className="container-custom-value">
-        <div className="label-custom-donate">
-          contribute $
+        <div className="input-container">
+          <input defaultValue={ (this.cursors.artist.get() / 100).toFixed(2).toString() }
+                 onBlur={ this.updateArtist }
+                 value={ this.state.artist }
+                 onChange={ this.handleChange('artist', true) }
+                 type="text"
+                 className="input-sc input-custom" />
+          <div className="label-custom-left">
+            contribute $
+          </div>
+          <div className="label-custom-right">
+            to artists
+          </div>
         </div>
-        <div className="label-custom-value">
-          to artists
-        </div>
-        <input defaultValue={ (this.cursors.artist.get() / 100).toFixed(2).toString() }
-               onBlur={ this.updateArtist }
-               value={ this.state.artist }
-               onChange={ this.handleChange('artist', true) }
-               type="text"
-               className="input-custom-value" />
-      </div>
 
-      <div className="container-custom-value">
-        <div className="label-custom-donate">
-          contribute $
+        <div className="input-container">
+          <div className="label-custom-left">
+            contribute $
+          </div>
+          <div className="label-custom-right">
+            to charities
+          </div>
+          <input defaultValue={ (this.cursors.charity.get() / 100).toFixed(2).toString() }
+                 onBlur={ this.updateCharity }
+                 value={ this.state.charity }
+                 onChange={ this.handleChange('charity', true) }
+                 type="text"
+                 className="input-sc input-custom" />
         </div>
-        <div className="label-custom-value">
-          to charities
-        </div>
-        <input defaultValue={ (this.cursors.charity.get() / 100).toFixed(2).toString() }
-               onBlur={ this.updateCharity }
-               value={ this.state.charity }
-               onChange={ this.handleChange('charity', true) }
-               type="text"
-               className="input-custom-value" />
-      </div>
 
-      <div className="container-custom-value">
-        <div className="label-custom-donate">
-          contribute $
+        <div className="input-container">
+          <div className="label-custom-left">
+            contribute $
+          </div>
+          <div className="label-custom-right">
+            to Stereo Cause
+          </div>
+          <input defaultValue={ (this.cursors.stereoCause.get() / 100).toFixed(2).toString() }
+                 onBlur={ this.updateStereoCause }
+                 value={ this.state.stereoCause }
+                 onChange={ this.handleChange('stereoCause', true) }
+                 type="text"
+                 className="input-sc input-custom" />
         </div>
-        <div className="label-custom-value">
-          to Stereo Cause
-        </div>
-        <input defaultValue={ (this.cursors.stereoCause.get() / 100).toFixed(2).toString() }
-               onBlur={ this.updateStereoCause }
-               value={ this.state.stereoCause }
-               onChange={ this.handleChange('stereoCause', true) }
-               type="text"
-               className="input-custom-value" />
       </div>
-    </div>
   }
 });
 
