@@ -507,9 +507,36 @@ strong {
   border-top: 1px solid $sc-lighter-gray;
 }
 
+.lightbox-artist-description {
+  line-height: 1.5em;
+  border-bottom: 1px solid $sc-lighter-gray;
+  padding-bottom: 10px;
+}
 
+.lightbox-album-title {
+  font-size: $sc-body-font-size;
+  padding: 10px 0px;
+}
 
+.track-player {
+  width: 5%;
+  float: left;
+}
 
+.track-number {
+  width: 8%;
+  text-align: right;
+  padding-right: 2%;
+  float: left;
+}
+
+.track-title {
+  width: 85%;
+}
+
+.track-composers {
+  color: $sc-light-gray;
+}
 
 
 
