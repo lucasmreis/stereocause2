@@ -6,6 +6,8 @@ const cond = R.cond;
 const prop = R.prop;
 const K = R.always;
 const complement = R.complement;
+const find = R.find;
+const join = R.join;
 const eq = R.eq;
 const T = R.T;
 
@@ -54,3 +56,11 @@ export const isCustomValue = isSelected('customizing'); // state.total
 export const isCustomizing = prop('customizing'); // state.total
 
 export const isLoading = complement(eq('Contribute!')); // state.submitCaption
+
+export const artistFromState = state => compose( // state.artistDetails, cause
+  find(compose(
+    eq(state.current),
+    prop('id'))),
+  prop('albums'));
+
+export const renderComposers = c => '(' + join('/')(c) + ')';
