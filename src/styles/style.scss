@@ -509,6 +509,13 @@ strong {
   color: $sc-light-gray;
 }
 
+.lightbox-close-footer {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  color: $sc-light-gray;
+}
+
 .lightbox-artist-img {
   width: 100%;
 }
@@ -535,7 +542,7 @@ strong {
 }
 
 .track-player {
-  width: 5%;
+  width: 2%;
   float: left;
 }
 
@@ -556,7 +563,7 @@ strong {
 }
 
 .track-space {
-  width: 15%;
+  width: 12%;
   float: left;
 }
 

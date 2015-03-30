@@ -3,7 +3,7 @@ import ReactAddons from 'react/addons';
 
 var state = new Baobab({
   artistDetails: {
-    showing: true,
+    showing: false,
     current: 'aventureira'
   },
   showing: 'regular', // regular, controlFreak, justBought

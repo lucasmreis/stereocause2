@@ -11,7 +11,7 @@ var LightboxFooter = React.createClass({
 
   render: function() {
     return <div className="lightbox-footer">
-      <i className="fa fa-times fa-2x lightbox-close" onClick={ this.closeLightbox }></i>
+      <i className="fa fa-times fa-2x lightbox-close-footer" onClick={ this.closeLightbox }></i>
     </div>
   }
 });
