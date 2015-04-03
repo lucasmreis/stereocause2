@@ -1,19 +1,24 @@
 import React from 'react';
 import State from '../state';
 
+import AudioPlayer from './audio-player';
+
 import {artistFromState, renderComposers} from '../lib/helpers';
 
 import cause from '../../cause';
-
 
 var LightboxBody = React.createClass({
   mixins: [State.mixin],
   cursor: ['artistDetails'],
 
   listTracks: function(a) {
+    const fileName = f => 'assets/previews/' + f;
+
     return a.tracks.map(t => { return <div key={ t.number } className="track-line">
       <p>
-        <div className="track-player"><i className="fa fa-play"></i></div>
+        <div className="track-player">
+          <AudioPlayer file={ fileName(t.file) } />
+        </div>
         <div className="track-number">{ t.number }</div>
         <div className="track-title">{ t.title }</div>
       </p>

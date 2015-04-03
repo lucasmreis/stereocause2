@@ -33,6 +33,8 @@ $elem-margin: 5px;
 $elem-width-large: $elem-width-small * 2 + $elem-margin * 2;
 $elem-width-x-large: $elem-width-small * 4 + $elem-margin * 6;
 
+$lightbox-padding: 20px;
+
 body {
   font-family: $sc-font-family;
   line-height: 1.8em;
@@ -467,6 +469,7 @@ strong {
 }
 
 .lightbox {
+  font-size: $sc-card-font-size;
   overflow-y: scroll;
   z-index: 200;
   width: 50%;
@@ -494,7 +497,7 @@ strong {
 
 .lightbox-header {
   position: relative;
-  padding: 10px;
+  padding: $lightbox-padding;
   border-bottom: 1px solid $sc-lighter-gray;
 }
 
@@ -504,15 +507,15 @@ strong {
 
 .lightbox-close {
   position: absolute;
-  right: 10px;
-  top: 7px;
+  right: 20px;
+  top: 18px;
   color: $sc-light-gray;
 }
 
 .lightbox-close-footer {
   position: absolute;
-  right: 10px;
-  top: 0px;
+  right: 20px;
+  bottom: 7px;
   color: $sc-light-gray;
 }
 
@@ -521,24 +524,24 @@ strong {
 }
 
 .lightbox-body {
-  padding: 10px;
+  padding: $lightbox-padding;
 }
 
 .lightbox-footer {
   position: relative;
-  padding: 10px;
+  padding: $lightbox-padding;
   border-top: 1px solid $sc-lighter-gray;
 }
 
 .lightbox-artist-description {
   line-height: 1.5em;
   border-bottom: 1px solid $sc-lighter-gray;
-  padding-bottom: 10px;
+  padding-bottom: $lightbox-padding;
 }
 
 .lightbox-album-title {
   font-size: $sc-body-font-size;
-  padding: 10px 0px;
+  padding: ($lightbox-padding) 0px;
 }
 
 .track-player {
@@ -567,7 +570,9 @@ strong {
   float: left;
 }
 
-
+.blue {
+  color: $sc-blue;
+}
 
 
 
