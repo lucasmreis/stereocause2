@@ -4,6 +4,7 @@
   "description": "Stereo Cause lets you discover new music and help important causes by making charitable contributions.",
   "main": "",
   "scripts": {
+    "start": "node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -37,6 +38,8 @@
   },
   "dependencies": {
     "baobab": "^0.4.1",
+    "good": "^5.1.2",
+    "good-console": "^4.1.0",
     "hapi": "^8.4.0",
     "ramda": "^0.13.0",
     "react-mask-mixin": "0.0.3"
