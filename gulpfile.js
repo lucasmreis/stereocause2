@@ -5,6 +5,8 @@ var sass = require('gulp-sass');
 var browserify = require('browserify');
 var babelify = require('babelify');
 var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
+var uglify = require('gulp-uglify');
 
 gulp.task('assets', function() {
   return gulp.src('src/assets/**/*.*')
@@ -21,11 +23,13 @@ gulp.task('scripts', function () {
   browserify('./src/scripts/index.jsx', {
     // entries: 'index.jsx',
     extensions: ['.jsx'],
-    debug: true
+    debug: false
   })
   .transform(babelify)
   .bundle()
   .pipe(source('app.js'))
+  .pipe(buffer())
+  .pipe(uglify())
   .pipe(gulp.dest('dist'));
 });
 
