@@ -1,5 +1,6 @@
 import Baobab from 'baobab';
-import ReactAddons from 'react/addons';
+import React from './react';
+//import ReactAddons from 'react/addons';
 
 var state = new Baobab({
   artistDetails: {
@@ -35,10 +36,10 @@ var state = new Baobab({
   cvc: '123'
 },
 {
-  mixins: [ReactAddons.PureRenderMixin],
+  mixins: [React.addons.PureRenderMixin],
   shiftReferences: true
 });
 
-state.on('update', () => console.log('STATE', JSON.stringify(state.get(), null, '  ')));
+state.on('update', () => console.log('STATE', React.addons, React.addons.PureRenderMixin, JSON.stringify(state.get(), null, '  ')));
 
 export default state;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from '../react';
 
 var JustBought = React.createClass({
   render: function() {

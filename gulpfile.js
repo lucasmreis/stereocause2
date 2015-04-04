@@ -10,18 +10,18 @@ var uglify = require('gulp-uglify');
 var babel = require("gulp-babel");
 
 gulp.task('assets', function() {
-  return gulp.src('src/assets/**/*.*')
+  return gulp.src('src/client/assets/**/*.*')
     .pipe(gulp.dest('dist/client/assets'));
 });
 
 gulp.task('styles', function() {
-  return gulp.src('src/styles/*.scss')
+  return gulp.src('src/client/styles/*.scss')
     .pipe(sass({errLogToConsole: true}))
     .pipe(gulp.dest('dist/client/styles'));
 });
 
 gulp.task('scripts', function() {
-  browserify('./src/scripts/index.jsx', {
+  browserify('./src/client/scripts/index.jsx', {
     // entries: 'index.jsx',
     extensions: ['.jsx'],
     debug: false
@@ -37,7 +37,7 @@ gulp.task('scripts', function() {
 gulp.task('template-index', function() {
   var cause = require('./src/cause.json');
 
-  return gulp.src('src/templates/index.handlebars')
+  return gulp.src('src/client/templates/index.handlebars')
     .pipe(handlebars(cause))
     .pipe(rename('index.html'))
     .pipe(gulp.dest('dist/client'));

@@ -8,10 +8,15 @@ server.start(function() {
     console.log('Hapi server started @', server.info.uri);
 });
 
+// STATIS FILES
 server.route({
-    path: '/',
+    path: '/{path*}',
     method: 'GET',
-    handler: function(request, reply) {
-        reply('Hello, world!');
+    handler: {
+      directory: {
+        path: "../client",
+        listing: false,
+        index: true
+      }
     }
 });

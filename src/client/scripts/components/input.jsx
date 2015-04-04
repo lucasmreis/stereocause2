@@ -1,5 +1,5 @@
 import R from 'ramda';
-import React from 'react';
+import React from '../react';
 import ReactMaskMixin from 'react-mask-mixin';
 
 var Input = React.createClass({

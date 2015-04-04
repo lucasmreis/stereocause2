@@ -1,4 +1,4 @@
-import React from 'react';
+import React from '../react';
 
 import FormHeader from './form-header';
 import TotalAndProportions from './total-and-proportions';

@@ -1,5 +1,5 @@
 import R from 'ramda';
-import React from 'react';
+import React from '../react';
 import State from '../state';
 
 import RegularForm from './regular-form';

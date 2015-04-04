@@ -1,4 +1,4 @@
-import React from 'react';
+import React from '../react';
 import State from '../state';
 
 import cause from '../../../cause';
