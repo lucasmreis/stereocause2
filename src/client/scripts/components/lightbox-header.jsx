@@ -1,7 +1,7 @@
 import React from 'react';
 import State from '../state';
 
-import cause from '../../cause';
+import cause from '../../../cause';
 
 var LightboxHeader = React.createClass({
   mixins: [State.mixin],

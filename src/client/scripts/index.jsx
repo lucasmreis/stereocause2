@@ -1,5 +1,5 @@
 import R from 'ramda';
-import cause from '../cause';
+import cause from '../../cause';
 import React from 'react';
 import ScForm from './components/sc-form';
 import ArtistDetails from './components/artist-details';

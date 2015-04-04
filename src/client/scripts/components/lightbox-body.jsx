@@ -5,7 +5,7 @@ import AudioPlayer from './audio-player';
 
 import {artistFromState, renderComposers} from '../lib/helpers';
 
-import cause from '../../cause';
+import cause from '../../../cause';
 
 var LightboxBody = React.createClass({
   mixins: [State.mixin],
