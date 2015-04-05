@@ -44,7 +44,7 @@ gulp.task('template-index', function() {
 });
 
 gulp.task('server', function() {
-  return gulp.src('src/server/*.js')
+  return gulp.src('src/server/**/*.js')
     .pipe(babel())
     .pipe(gulp.dest('dist/server'));
 });

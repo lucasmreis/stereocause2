@@ -1,10 +1,16 @@
+import config from './config';
 import Hapi from 'hapi';
 import Good from 'good';
 import GoodConsole from 'good-console';
 
+import statsRoute from './routes/stats';
+
 var server = new Hapi.Server();
 
-server.connection({ port: 8080 });
+server.connection({ port: config.port });
+
+// ROUTES
+server.route(statsRoute);
 
 // STATIC FILES
 server.route({
@@ -27,9 +33,9 @@ server.register({
             args:[{ log: '*', response: '*' }]
         }]
     }
-}, function (err) {
+}, err => {
     if (err) {
-        throw err; // something bad happened loading the plugin
+        throw err;
     }
 
     server.start(function () {
