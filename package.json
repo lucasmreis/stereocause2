@@ -41,6 +41,7 @@
     "good": "^5.1.2",
     "good-console": "^4.1.0",
     "hapi": "^8.4.0",
+    "mongodb": "^2.0.25",
     "ramda": "^0.13.0",
     "react-mask-mixin": "0.0.3"
   }
