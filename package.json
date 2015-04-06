@@ -26,6 +26,7 @@
   "homepage": "https://github.com/lucasmreis/stereocause2",
   "devDependencies": {
     "babelify": "^5.0.4",
+    "boom": "^2.7.0",
     "browserify": "^9.0.3",
     "code": "^1.4.0",
     "gulp": "^3.8.11",

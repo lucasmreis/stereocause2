@@ -28,25 +28,23 @@ const query = c => [
     }
   }];
 
+const buildQuery = compose(
+  query,
+  prop('cause'),
+  prop('params'))
+
 const handler = (request, reply) => {
-  const id = compose(
-    prop('cause'),
-    prop('params'));
+  const respond = x =>
+    x ? reply(x) : reply('Cause not found.').code(404);
 
-  const q = compose(
-    query,
-    id);
-
-  const onlyRequested = head;
-
-  let response = composeP(
-    reply,
-    onlyRequested,
+  const response = composeP(
+    respond,
+    head,
     closeDb,
-    aggregate(q(request))('contributions'),
+    aggregate(buildQuery(request))('contributions'),
     getDb(config.mongo.uri));
 
-  response(MongoClient);
+  return response(MongoClient);
 };
 
 export default {
