@@ -7,7 +7,9 @@ var babelify = require('babelify');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var uglify = require('gulp-uglify');
-var babel = require("gulp-babel");
+var babel = require('gulp-babel');
+var lab = require('gulp-lab');
+var runSequence = require('run-sequence');
 
 gulp.task('assets', function() {
   return gulp.src('src/client/assets/**/*.*')
@@ -43,7 +45,7 @@ gulp.task('template-index', function() {
     .pipe(gulp.dest('dist/client'));
 });
 
-gulp.task('server', function() {
+gulp.task('server-build', function() {
   return gulp.src('src/server/**/*.js')
     .pipe(babel())
     .pipe(gulp.dest('dist/server'));
@@ -51,10 +53,19 @@ gulp.task('server', function() {
 
 gulp.task('default', ['template-index', 'styles', 'assets', 'scripts']);
 
+gulp.task('server-test', function() {
+  return gulp.src('dist/server/**/*-spec.js')
+    .pipe(lab('-c'));
+});
+
+gulp.task('server', function() {
+  runSequence('server-build', 'server-test');
+});
+
 gulp.task('watch', function () {
   gulp.watch('src/**/*.*', ['default']);
 });
 
 gulp.task('watch-server', function () {
-  gulp.watch('src/server/**/*.*', ['server']);
+  gulp.watch('src/server/**/*.*', ['server-build']);
 });

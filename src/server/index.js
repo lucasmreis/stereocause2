@@ -26,19 +26,23 @@ server.route({
 });
 
 server.register({
-    register: Good,
-    options: {
-        reporters: [{
-            reporter: GoodConsole,
-            args:[{ log: '*', response: '*' }]
-        }]
-    }
+  register: Good,
+  options: {
+    reporters: [{
+      reporter: GoodConsole,
+      args:[{ log: '*', response: '*' }]
+    }]
+  }
 }, err => {
-    if (err) {
-        throw err;
-    }
+  if (err) {
+    throw err;
+  }
 
+  if (!module.parent) {
     server.start(function () {
-        server.log('info', 'Server running at: ' + server.info.uri);
+      server.log('info', 'Server running at: ' + server.info.uri);
     });
+  }
 });
+
+export default server;

@@ -28,29 +28,29 @@ const query = c => [
     }
   }];
 
+const handler = (request, reply) => {
+  const id = compose(
+    prop('cause'),
+    prop('params'));
+
+  const q = compose(
+    query,
+    id);
+
+  const onlyRequested = head;
+
+  let response = composeP(
+    reply,
+    onlyRequested,
+    closeDb,
+    aggregate(q(request))('contributions'),
+    getDb(config.mongo.uri));
+
+  response(MongoClient);
+};
+
 export default {
   method: 'GET',
-
   path: '/api/stats/{cause}',
-
-  handler: function (request, reply) {
-    const id = compose(
-      prop('cause'),
-      prop('params'));
-
-    const q = compose(
-      query,
-      id);
-
-    const onlyRequested = head;
-
-    let response = composeP(
-      reply,
-      onlyRequested,
-      closeDb,
-      aggregate(q(request))('contributions'),
-      getDb(config.mongo.uri));
-
-    response(MongoClient);
-  }
+  handler: handler
 }
