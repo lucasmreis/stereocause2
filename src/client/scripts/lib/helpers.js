@@ -64,3 +64,5 @@ export const artistFromState = state => compose( // state.artistDetails, cause
   prop('albums'));
 
 export const renderComposers = c => '(' + join('/')(c) + ')';
+
+export const log = m => x => { console.log(m, x); return x; };

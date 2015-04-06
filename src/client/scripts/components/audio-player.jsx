@@ -26,10 +26,6 @@ var AudioPlayer = React.createClass({
     playerElement.addEventListener('pause', this.audioPause);
   },
 
-  componentDidUpdate: function() {
-    console.log('UPDATE', this.state);
-  },
-
   audioReady: function() {
     this.setState({
       isLoading: false

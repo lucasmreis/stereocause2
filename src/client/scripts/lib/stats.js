@@ -1,3 +1,3 @@
-var avg = s => Math.floor((s.artist + s.charity + s.stereoCause) / s.qty) / 100;
+var avg = s => Math.floor((s.sumArtist + s.sumCharity + s.sumStereoCause) / s.count) / 100;
 
 export {avg};
