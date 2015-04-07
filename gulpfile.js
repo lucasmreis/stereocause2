@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var gutil = require('gulp-util');
 var handlebars = require('gulp-compile-handlebars');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
@@ -9,6 +10,7 @@ var buffer = require('vinyl-buffer');
 var uglify = require('gulp-uglify');
 var babel = require('gulp-babel');
 var lab = require('gulp-lab');
+var preprocess = require('gulp-preprocess');
 var runSequence = require('run-sequence');
 
 gulp.task('assets', function() {
@@ -23,16 +25,18 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', function() {
+  gutil.log(gutil.colors.green('Client building environment: '), gutil.colors.bgGreen(gutil.env['env']));
+
   browserify('./src/client/scripts/index.jsx', {
     // entries: 'index.jsx',
     extensions: ['.jsx'],
-    debug: false
+    debug: gutil.env['env'] === 'production' ? false : true
   })
   .transform(babelify)
   .bundle()
   .pipe(source('app.js'))
   .pipe(buffer())
-  //.pipe(uglify())
+  .pipe(gutil.env['env'] === 'production' ? uglify() : gutil.noop())
   .pipe(gulp.dest('dist/client'));
 });
 
@@ -46,8 +50,11 @@ gulp.task('template-index', function() {
 });
 
 gulp.task('server-build', function() {
+  gutil.log(gutil.colors.green('Server building environment: '), gutil.colors.bgGreen(gutil.env['env']));
+
   return gulp.src('src/server/**/*.js')
     .pipe(babel())
+    .pipe(preprocess({ context: { NODE_ENV: gutil.env['env'] } }))
     .pipe(gulp.dest('dist/server'));
 });
 

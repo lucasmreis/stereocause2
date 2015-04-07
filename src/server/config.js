@@ -1,4 +1,4 @@
-export default {
+var config = {
   port: parseInt(process.env.PORT, 10) || 8080,
 
   mongo: {
@@ -13,3 +13,14 @@ export default {
     key: process.env.MANDRILL_KEY || 'QQJ-Rj8ilCQZa2HAygVuEg'
   },
 };
+
+// @ifdef NODE_ENV=='development'
+
+// @endif
+
+// @ifdef NODE_ENV=='testing'
+config.mongo.uri = 'mongodb://localhost/stereocause-test';
+config.mandrill.key = undefined;
+// @endif
+
+export default config;

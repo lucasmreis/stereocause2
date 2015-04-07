@@ -5,6 +5,8 @@ import GoodConsole from 'good-console';
 
 import statsRoute from './routes/stats';
 
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+
 var server = new Hapi.Server();
 
 server.connection({ port: config.port });
