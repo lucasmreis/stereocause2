@@ -14,13 +14,17 @@ var ArtistDetails = React.createClass({
     return c.showing ? 'lightbox-bg lightbox-show' : 'lightbox-bg lightbox-hide';
   },
 
+  lightboxContent: function(c) {
+    return !c.showing ? null : <div className="lightbox">
+      <LightboxHeader />
+      <LightboxBody />
+      <LightboxFooter />
+    </div>;
+  },
+
   render: function() {
     return <div className={ this.hideLightbox(this.state.cursor) }>
-      <div className="lightbox">
-        <LightboxHeader />
-        <LightboxBody />
-        <LightboxFooter />
-      </div>
+      { this.lightboxContent(this.state.cursor) }
     </div>
   }
 });
