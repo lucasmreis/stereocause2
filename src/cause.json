@@ -1,7 +1,16 @@
 {
   "causeId": "1",
+  "artistsTitle": "Meet the artists:",
+  "charitiesTitle": "Learn about the charities:",
+  "contributeTitle": "Contribute!",
   "artistsDescription": "Explore Brazil's new music scene with artists whose sounds blend traditional and new.",
   "charitiesDescription": "From clean water projects in developing countries to cancer research, here are some of the organizations having reshape the world we live in.",
+  "contributeDescription": [
+    "Decide how much you want to contribute and where the money goes to: artists, causes and us. Then download the music and ",
+    "#spreadthelove",
+    ". Giving more than the average contribution of ",
+    " gets you all six albums."
+  ],
   "albums": [
     {
       "id": "aventureira",
@@ -135,7 +144,7 @@
         { "number": "10","composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Toda calma desse mundo" }
       ]
     }
-  ], 
+  ],
   "charities": [
     {
       "name": "Charity Water",
