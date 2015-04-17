@@ -4,6 +4,7 @@ import Good from 'good';
 import GoodConsole from 'good-console';
 
 import statsRoute from './routes/stats';
+import contributeRoute from './routes/contribute';
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -13,6 +14,7 @@ server.connection({ port: config.port });
 
 // ROUTES
 server.route(statsRoute);
+server.route(contributeRoute);
 
 // STATIC FILES
 server.route({

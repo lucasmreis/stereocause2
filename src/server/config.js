@@ -14,13 +14,4 @@ var config = {
   },
 };
 
-// @ifdef NODE_ENV=='development'
-
-// @endif
-
-// @ifdef NODE_ENV=='testing'
-config.mongo.uri = 'mongodb://localhost/stereocause-test';
-config.mandrill.key = undefined;
-// @endif
-
 export default config;
