@@ -1,13 +1,12 @@
 import R from 'ramda';
-import Mongo from 'mongodb';
-
 import config from '../config';
+import Mongo from 'mongodb';
 import Stripe from 'stripe';
-
 import Joi from 'joi';
 
 const {compose, composeP, prop, assoc} = R;
 import {getDb, insertObj, closeDb} from '../mongo-wrapper';
+import {sendMalil} from '../mail-client';
 
 var MongoClient = Mongo.MongoClient;
 
@@ -31,11 +30,16 @@ const createStripeRequest = p => ({
 });
 
 const insertMongo = r => composeP(
-  //x => assoc('mongoResponse', x, r),
+  x => assoc('mongoResponse', x, r),
   closeDb,
   insertObj(r)('contributions'),
   getDb(config.mongo.uri)
   )(MongoClient);
+
+const sendMail = r => config.isTest ?
+  Promise.resolve(assoc('sentMail', 'MAILCHIMP_TEST_OK', r)) :
+  sendMail(r.email, r._id)
+    .then(m => assoc('sentMail', m, r));
 
 const handler = (request, reply) => {
   const initial = compose(
@@ -44,8 +48,7 @@ const handler = (request, reply) => {
     )(request);
 
   const contribute = composeP(
-    a => Promise.reject('bad'),
-    logIt('CONTRIBUTION RESPONSE'),
+    sendMail,
     insertMongo,
     chargeStripe(initial),
     createStripeRequest);

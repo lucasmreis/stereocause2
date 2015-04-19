@@ -137,13 +137,13 @@ lab.experiment('contribute', function() {
     });
   });
 
-  lab.test.only('should contribute correctly', function(done) {
+  lab.test('should contribute correctly', function(done) {
     const options = {
       method: 'POST',
       url: '/api/contribute',
       payload: {
         email: 'aaa@aaa.com',
-        cause: 'test',
+        cause: 'testContribute',
         artist: 350,
         charity: 350,
         stereoCause: 350,
@@ -155,7 +155,6 @@ lab.experiment('contribute', function() {
 
     server.inject(options, function(response) {
       const r = response.result;
-      console.log('RESULT', r);
 
       expect(response.statusCode).to.equal(200);
 

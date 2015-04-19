@@ -49,6 +49,7 @@
     "good-console": "^4.1.0",
     "hapi": "^8.4.0",
     "joi": "^6.2.0",
+    "mandrill-api": "^1.0.45",
     "mongodb": "^2.0.25",
     "ramda": "^0.13.0",
     "react-mask-mixin": "0.0.3",
