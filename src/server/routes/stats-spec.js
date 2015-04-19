@@ -6,7 +6,7 @@ import server from '../';
 
 const expect = Code.expect;
 
-lab.experiment('stats', function() {
+lab.experiment.skip('stats', function() {
   lab.test('should return correct stats', function(done) {
     const options = {
       method: "GET",

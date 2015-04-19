@@ -6,8 +6,6 @@ import GoodConsole from 'good-console';
 import statsRoute from './routes/stats';
 import contributeRoute from './routes/contribute';
 
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-
 var server = new Hapi.Server();
 
 server.connection({ port: config.port });
@@ -45,6 +43,7 @@ server.register({
   if (!module.parent) {
     server.start(function () {
       server.log('info', 'Server running at: ' + server.info.uri);
+      server.log('info', 'Environment: ' + config.env);
     });
   }
 });

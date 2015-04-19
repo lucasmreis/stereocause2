@@ -52,6 +52,7 @@
     "mongodb": "^2.0.25",
     "ramda": "^0.13.0",
     "react-mask-mixin": "0.0.3",
-    "reqwest": "^1.1.5"
+    "reqwest": "^1.1.5",
+    "stripe": "^3.3.4"
   }
 }

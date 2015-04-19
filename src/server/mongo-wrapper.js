@@ -12,3 +12,8 @@ export const aggregate = query => collection => db =>
   new Promise((resolve, reject) =>
     db.collection(collection).aggregate(query,
       (err, ok) => !!err ? reject(err) : resolve([ok, db])));
+
+export const insertObj = obj => collection => db =>
+  new Promise((resolve, reject) =>
+    db.collection(collection).insert(obj,
+      (err, ok) => !!err ? reject(err) : resolve([ok, db])));

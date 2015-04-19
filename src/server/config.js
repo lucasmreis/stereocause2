@@ -12,6 +12,10 @@ var config = {
   mandrill: {
     key: process.env.MANDRILL_KEY || 'QQJ-Rj8ilCQZa2HAygVuEg'
   },
+
+  env: process.env.NODE_ENV,
+
+  isTest: process.env.NODE_ENV === 'test'
 };
 
 export default config;

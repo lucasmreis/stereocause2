@@ -10,7 +10,6 @@ var buffer = require('vinyl-buffer');
 var uglify = require('gulp-uglify');
 var babel = require('gulp-babel');
 var lab = require('gulp-lab');
-var preprocess = require('gulp-preprocess');
 var runSequence = require('run-sequence');
 
 gulp.task('assets', function() {
@@ -54,7 +53,6 @@ gulp.task('server-build', function() {
 
   return gulp.src('src/server/**/*.js')
     .pipe(babel())
-    .pipe(preprocess({ context: { NODE_ENV: gutil.env['env'] } }))
     .pipe(gulp.dest('dist/server'));
 });
 
@@ -62,7 +60,7 @@ gulp.task('default', ['template-index', 'styles', 'assets', 'scripts']);
 
 gulp.task('server-test', function() {
   return gulp.src('dist/server/**/*-spec.js')
-    .pipe(lab('-c'));
+    .pipe(lab('-c -v'));
 });
 
 gulp.task('server', function() {

@@ -31,7 +31,7 @@ const query = c => [
 const buildQuery = compose(
   query,
   prop('cause'),
-  prop('params'))
+  prop('params'));
 
 const handler = (request, reply) => {
   const respond = x =>

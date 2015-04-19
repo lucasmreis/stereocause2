@@ -65,7 +65,7 @@ lab.experiment('contribute', function() {
       url: '/api/contribute',
       payload: {
         email: 'aaa@aaa.com',
-        cause: 'test',
+        cause: 'insertTest',
         artist: 350,
         charity: 50,
         stereoCause: 350,
@@ -137,7 +137,7 @@ lab.experiment('contribute', function() {
     });
   });
 
-  lab.test('should contribute correctly', function(done) {
+  lab.test.only('should contribute correctly', function(done) {
     const options = {
       method: 'POST',
       url: '/api/contribute',
@@ -155,6 +155,7 @@ lab.experiment('contribute', function() {
 
     server.inject(options, function(response) {
       const r = response.result;
+      console.log('RESULT', r);
 
       expect(response.statusCode).to.equal(200);
 
