@@ -12,10 +12,10 @@ var K = R.always;
 var eq = R.eq;
 var T = R.T;
 
-var isControlFreak = s => s.select('showing').get() === 'controlFreak';
-var isArtist       = s => { const d = s.select('dividing').get(); return d.artist === 0.6 && d.stereoCause === 0.2; };
-var isCharity      = s => { const d = s.select('dividing').get(); return d.artist === 0.2 && d.stereoCause === 0.2; };
-var isStereoCause  = s => { const d = s.select('dividing').get(); return d.artist === 0.2 && d.stereoCause === 0.6; };
+var isControlFreak = s => s.showing.get() === 'controlFreak';
+var isArtist       = s => { const d = s.dividing.get(); return d.artist === 0.6 && d.stereoCause === 0.2; };
+var isCharity      = s => { const d = s.dividing.get(); return d.artist === 0.2 && d.stereoCause === 0.2; };
+var isStereoCause  = s => { const d = s.dividing.get(); return d.artist === 0.2 && d.stereoCause === 0.6; };
 
 var proportionSelected = cond(
   [isControlFreak, K('controlFreak')],
@@ -47,13 +47,18 @@ var setProportions = compose(
   prop('target'));
 
 var DividingOptions = React.createClass({
+  mixins: [State.mixin],
+  cursors: {
+    showing: ['showing'],
+    dividing: ['dividing'],
+  },
 
   onChangeProportions: setProportions,
 
   render: function() {
     return <span className="select-container">
       <select className="select-form"
-              value={ proportionSelected(State) }
+              value={ proportionSelected(this.cursors) }
               onChange={ this.onChangeProportions }>
         <option value="equal">In equal parts</option>
         <option value="artist">Giving more to Artists</option>
