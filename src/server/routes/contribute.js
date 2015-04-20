@@ -6,7 +6,7 @@ import Joi from 'joi';
 
 const {compose, composeP, prop, assoc} = R;
 import {getDb, insertObj, closeDb} from '../mongo-wrapper';
-import {sendMalil} from '../mail-client';
+import {sendMail} from '../mail-client';
 
 var MongoClient = Mongo.MongoClient;
 
@@ -36,7 +36,7 @@ const insertMongo = r => composeP(
   getDb(config.mongo.uri)
   )(MongoClient);
 
-const sendMail = r => config.isTest ?
+const sendOkMail = r => config.isTest ?
   Promise.resolve(assoc('sentMail', 'MAILCHIMP_TEST_OK', r)) :
   sendMail(r.email, r._id)
     .then(m => assoc('sentMail', m, r));
@@ -50,7 +50,7 @@ const handler = (request, reply) => {
   console.log('PAYLOAD', initial);
 
   const contribute = composeP(
-    // sendMail,
+    sendOkMail,
     insertMongo,
     chargeStripe(initial),
     createStripeRequest);

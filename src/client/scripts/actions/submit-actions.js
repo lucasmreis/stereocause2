@@ -19,7 +19,7 @@ const createToken = () => new Promise((resolve, reject) =>
 
 export const contribute = () => composeP(
   setDone,
-  x => console.log('REQUEST CONTRIBUTION', x),
+  x => console.log('CONTRIBUTION RESPONSE', x),
   apiSend,
   requestContribution(State.get()),
   createToken,

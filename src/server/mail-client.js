@@ -25,5 +25,5 @@ const message = (to, buyId) => ({
 export const sendMail = (to, buyId) =>
   new Promise((resolve, reject) =>
     mandrillClient.messages.send({ message: message(to, buyId) },
-      function(ok)  { resolve(ok); },
-      function(err) { reject(err); }));
+      ok => resolve(ok),
+      err => reject(err)));
