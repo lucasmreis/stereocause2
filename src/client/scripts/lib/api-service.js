@@ -1,12 +1,8 @@
 import R from 'ramda';
 import Reqwest from 'reqwest';
 
-const compose = R.compose;
-const toPairs = R.toPairs;
-const concat = R.concat;
-const prop = R.prop;
-const join = R.join;
-const map = R.map;
+const {compose, toPairs, concat, prop, join, map, ifElse, eq} = R;
+const I = R.identity;
 
 // {
 //   method: 'GET',
@@ -20,12 +16,12 @@ const map = R.map;
 // }
 
 const buildParamsUri = compose(
-  concat('?'),
+  ifElse(eq(''), I, concat('?')),
   join('&'),
   map(join('=')),
   toPairs);
 
-export var send = req =>
+export const apiSend = req =>
   new Promise((resolve, reject) => {
     Reqwest({
       method: req.method,

@@ -47,15 +47,17 @@ const handler = (request, reply) => {
     prop('payload')
     )(request);
 
+  console.log('PAYLOAD', initial);
+
   const contribute = composeP(
-    sendMail,
+    // sendMail,
     insertMongo,
     chargeStripe(initial),
     createStripeRequest);
 
   return contribute(initial)
     .then(x  => reply(x))
-    .catch(e => reply(e).code(500));
+    .catch(e => { console.log('ERROR', e); reply(e).code(500); });
 };
 
 export default {

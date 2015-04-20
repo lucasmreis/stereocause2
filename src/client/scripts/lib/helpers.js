@@ -12,14 +12,19 @@ const eq = R.eq;
 const T = R.T;
 
 export var valuesFromTotal = state => {
-  var artist =
+  const artist =
     Math.floor(state.total.value * state.dividing.artist);
-  var stereoCause =
+  const stereoCause =
     Math.floor(state.total.value * state.dividing.stereoCause);
-  var charity =
+  const charity =
     state.total.value - artist - stereoCause;
   return {artist, charity, stereoCause};
 };
+
+export const valuesFromState = state =>
+  state.showing === 'controlFreak' ?
+    state.values :
+    valuesFromTotal(state);
 
 export var money = x => {
   const m = x / 100;
@@ -28,15 +33,6 @@ export var money = x => {
 };
 
 export const targetValue = f => x => f(x.target.value);
-
-export const requestStripe = state => {
-  return {
-    number: state.number.replace(/ /g, ''),
-    cvc: state.cvc,
-    exp_month: state.expiry.split('/')[0],
-    exp_year: state.expiry.split('/')[1]
-  };
-};
 
 export const formatNumber = n => n.replace(/[^0-9]/g, '').replace(/(\d{4}\s*)/g, x => x.match(/\s/) ? x : x + ' ');
 
