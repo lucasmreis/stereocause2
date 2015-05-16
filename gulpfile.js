@@ -56,7 +56,7 @@ gulp.task('server-build', function() {
     .pipe(gulp.dest('dist/server'));
 });
 
-gulp.task('default', ['template-index', 'styles', 'assets', 'scripts']);
++gulp.task('client', ['template-index', 'styles', 'assets', 'scripts']);
 
 gulp.task('server-test', function() {
   return gulp.src('dist/server/**/*-spec.js')
@@ -66,6 +66,8 @@ gulp.task('server-test', function() {
 gulp.task('server', function() {
   runSequence('server-build', 'server-test');
 });
+
+gulp.task('default', ['client', 'server']);
 
 gulp.task('watch', function () {
   gulp.watch('src/**/*.*', ['default']);

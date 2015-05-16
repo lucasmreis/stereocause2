@@ -7,7 +7,10 @@ import DividingOptions from './dividing-options';
 
 var TotalAndProportions = React.createClass({
   mixins: [State.mixin],
-  cursor: ['total'],
+  cursors: {
+    total: ['total'],
+    dividing: ['dividing'],
+  },
 
   onClickTotal: v => () => State.set('total', { customizing: false, value: v }),
 
@@ -24,35 +27,35 @@ var TotalAndProportions = React.createClass({
       <div className="btn-value-container">
         <button onClick={ this.onClickTotal(500) }
           type="button"
-          className={ this.btnClass(this.state.cursor)(500)('btn btn-value') }>
+          className={ this.btnClass(this.cursors.total.get())(500)('btn btn-value') }>
           $5
         </button>
         <button onClick={ this.onClickTotal(1000) }
           type="button"
-          className={ this.btnClass(this.state.cursor)(1000)('btn btn-value') }>
+          className={ this.btnClass(this.cursors.total.get())(1000)('btn btn-value') }>
           $10
         </button>
         <button onClick={ this.onClickTotal(2000) }
           type="button"
-          className={ this.btnClass(this.state.cursor)(2000)('btn btn-value') }>
+          className={ this.btnClass(this.cursors.total.get())(2000)('btn btn-value') }>
           $20
         </button>
         <button onClick={ this.onClickTotal(5000) }
           type="button"
-          className={ this.btnClass(this.state.cursor)(5000)('btn btn-value') }>
+          className={ this.btnClass(this.cursors.total.get())(5000)('btn btn-value') }>
           $50
         </button>
 
         {
-          !isCustomizing(this.state.cursor) ?
+          !isCustomizing(this.cursors.total.get()) ?
           <button onClick={ this.onClickCustomize }
             type="button"
-            className={ this.btnClass(this.state.cursor)('customizing')('btn btn-customize') }>
-            { isCustomValue(this.state.cursor) ? money(this.state.cursor.value) : 'Customize' }
+            className={ this.btnClass(this.cursors.total.get())('customizing')('btn btn-customize') }>
+            { isCustomValue(this.cursors.total.get()) ? money(this.cursors.total.get().value) : 'Customize' }
           </button> : null
         }
         {
-          isCustomizing(this.state.cursor) ?
+          isCustomizing(this.cursors.total.get()) ?
           <input onChange={ this.onChangeCustomize }
             onBlur={ this.onBlurCustomize }
             type="text"
