@@ -1,9 +1,12 @@
 import State from '../state';
 import R from 'ramda';
+
 import {requestStripe, requestContribution} from '../lib/requests';
 import {apiSend} from '../lib/api-service';
 
-const composeP = R.composeP;
+import {getStats} from './stats-actions';
+
+const {tap, composeP, compose, prop} = R;
 
 const cb = x => console.log(JSON.stringify(x, null, '  '));
 
@@ -19,7 +22,11 @@ const createToken = () => new Promise((resolve, reject) =>
 
 export const contribute = () => composeP(
   setDone,
-  x => console.log('CONTRIBUTION RESPONSE', x),
+  tap(compose(
+    getStats,
+    x => ({ causeId: x }),
+    prop('cause'))),
+  x => { console.log('CONTRIBUTION RESPONSE', JSON.stringify(x, null, '  ')); return x; },
   apiSend,
   requestContribution(State.get()),
   createToken,
