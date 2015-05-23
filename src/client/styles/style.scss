@@ -574,7 +574,18 @@ strong {
   color: $sc-blue;
 }
 
+// THANK YOU
 
+.btn-download {
+  margin: $elem-margin 0px;
+  width: 100%;
+}
+
+.btn-download-main {
+  border-width: 0px;
+  background-color: $sc-blue;
+  color: white;
+}
 
 
 

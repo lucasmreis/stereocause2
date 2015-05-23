@@ -33,7 +33,10 @@ var state = new Baobab({
   shareMyEmail: false,
   number: '4242 4242 4242 4242',
   expiry: '12/18',
-  cvc: '123'
+  cvc: '123',
+  bought: {
+    email: 'bla@bla.com'
+  }
 },
 {
   mixins: [React.addons.PureRenderMixin],

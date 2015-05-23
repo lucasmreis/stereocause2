@@ -12,7 +12,11 @@ const cb = x => console.log(JSON.stringify(x, null, '  '));
 
 const setValidating = () => State.set('submitCaption', 'Validating Card...');
 
-const setDone = () => State.set('submitCaption', 'Contribute!');
+const setDone = c => {
+  State.set('bought', c);
+  State.set('submitCaption', 'Contribute!');
+  State.set('showing', 'justBought');
+};
 
 const createToken = () => new Promise((resolve, reject) =>
   Stripe.card.createToken(
