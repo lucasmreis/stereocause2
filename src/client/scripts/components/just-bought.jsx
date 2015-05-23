@@ -11,10 +11,12 @@ var JustBought = React.createClass({
   render: function() {
     return <div>
       <FormHeaderThankYou />
-      <DownloadForm />
-      <p className="form-text">
-        <i className="fa fa-info-circle"></i> Your receipt and music download links will also be sent to { this.state.cursor.email }
-      </p>
+      <div className="form-container">
+        <DownloadForm />
+        <p className="form-text">
+          <i className="fa fa-info-circle"></i> Your receipt and music download links will also be sent to { this.state.cursor.email }
+        </p>
+      </div>
     </div>;
   }
 });
