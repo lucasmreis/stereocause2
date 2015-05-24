@@ -5,6 +5,7 @@ import GoodConsole from 'good-console';
 
 import statsRoute from './routes/stats';
 import contributeRoute from './routes/contribute';
+import myStereoCauseRoute from './routes/my-stereo-cause';
 
 var server = new Hapi.Server();
 
@@ -13,6 +14,7 @@ server.connection({ port: config.port });
 // ROUTES
 server.route(statsRoute);
 server.route(contributeRoute);
+server.route(myStereoCauseRoute);
 
 // STATIC FILES
 server.route({
