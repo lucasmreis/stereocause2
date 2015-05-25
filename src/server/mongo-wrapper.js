@@ -17,6 +17,8 @@ export const aggregate = mongoFunc('aggregate');
 
 export const insertObj = mongoFunc('insert');
 
+export const findOne = mongoFunc('findOne');
+
 // export const aggregate = query => collection => db =>
 //   new Promise((resolve, reject) =>
 //     db.collection(collection).aggregate(query,

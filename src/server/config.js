@@ -13,6 +13,8 @@ var config = {
     key: process.env.MANDRILL_KEY || 'QQJ-Rj8ilCQZa2HAygVuEg'
   },
 
+  file: 'storage/stereoCause.zip',
+
   env: process.env.NODE_ENV,
 
   isTest: process.env.NODE_ENV === 'test'
