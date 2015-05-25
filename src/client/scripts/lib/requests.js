@@ -29,3 +29,8 @@ export const requestContribution = state => stripeResponse => ({
     stripeToken: stripeResponse.id
   }
 });
+
+export const requestMyStereoCause = bought => ({
+  method: 'GET',
+  url: 'my-stereo-cause/' + bought.email + '/' + bought._id
+});

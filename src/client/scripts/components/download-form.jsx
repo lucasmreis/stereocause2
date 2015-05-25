@@ -1,9 +1,16 @@
 import React from '../react';
+import State from '../state';
+
+import {getMyStereoCause} from '../actions/download-actions';
 
 var DownloadForm = React.createClass({
+  downloadMyStereoCause: function(bought) {
+    return () => window.location.href = 'my-stereo-cause/' + bought.email + '/' + bought._id + '/stereoCause.zip';
+  },
+
   render: function() {
     return <div>
-      <button
+      <button onClick={ this.downloadMyStereoCause(State.select('bought').get()) }
           type="button"
           className="btn btn-download btn-download-main">
           <i className="fa fa-lg fa-download"></i> Download

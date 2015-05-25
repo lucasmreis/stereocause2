@@ -33,6 +33,6 @@ const handler = (request, reply) => {
 
 export default {
   method: 'GET',
-  path: '/my-stereo-cause/{email}/{id}',
+  path: '/my-stereo-cause/{email}/{id}/stereoCause.zip',
   handler: handler
 };
