@@ -20,7 +20,7 @@ const handler = (request, reply) => {
   const respond = x =>
     !x ?
       reply('Contribution not found.').code(404) :
-      reply.file(config.file);
+      reply.file(config.file).code(200);
 
   const response = composeP(
     respond,

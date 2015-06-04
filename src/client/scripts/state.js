@@ -35,7 +35,8 @@ var state = new Baobab({
   expiry: '12/18',
   cvc: '123',
   bought: {
-    email: 'bla@bla.com'
+    email: 'trewtrewbla@bla.com',
+    _id: '5560cb2ebabd9501194c7a86'
   }
 },
 {
