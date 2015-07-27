@@ -29,6 +29,13 @@ server.route({
     }
 });
 
+// JUST-BOUGHT ROUTE FOR ANALYTICS
+server.route({
+    method: 'GET',
+    path: '/just-bought',
+    handler: (request, reply) => reply.file('../client/index.html')
+});
+
 server.register({
   register: Good,
   options: {

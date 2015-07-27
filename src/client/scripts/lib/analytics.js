@@ -1,0 +1,1 @@
+export const pageView = p => typeof(ga) === 'function' ? ga('send', 'pageview', p) : null;

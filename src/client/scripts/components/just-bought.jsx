@@ -4,9 +4,16 @@ import State from '../state';
 import FormHeaderThankYou from './form-header-thank-you';
 import DownloadForm from './download-form';
 
+import {pageView} from '../lib/analytics';
+
 var JustBought = React.createClass({
   mixins: [State.mixin],
   cursor: ['bought'],
+
+  componentDidMount: function() {
+    window.history.pushState({}, null, 'just-bought');
+    pageView('/just-bought');
+  },
 
   render: function() {
     return <div>

@@ -41,6 +41,7 @@ gulp.task('scripts', function() {
 
 gulp.task('template-index', function() {
   var cause = require('./src/cause.json');
+  cause.production = gutil.env['env'] === 'production';
 
   return gulp.src('src/client/templates/index.handlebars')
     .pipe(handlebars(cause))
