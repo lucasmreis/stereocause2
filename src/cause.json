@@ -13,12 +13,34 @@
   ],
   "albums": [
     {
+      "id": "o-mundo-mora-logo-ali",
+      "name": "O Mundo Mora Logo Ali (The World Lives Close By)",
+      "artist": "Pedro Mann",
+      "premium": false,
+      "coverImage":  "cover-o-mundo-mora-logo-ali.jpg",
+      "artistImage": "artist-pedro-mann.jpg",
+      "smallDescription": "Pop songs that will bring you to ...",
+      "bigDescription": "O mundo mora logo ali (the world lives close by) is the name of the new album by bass player, singer and songwriter Pedro Mann, who left home and set out to embrace the world upon releasing thirteen of his best loved songs, in this first solo project, under the Rio de Janeiro label, Bolacha Discos. <br><br>Home, in this context, is not his parents’ house, which he had long left. The comfort zone which is refered to is other people’s homes, the several artists and bands with whom he played collaborated and developed in twenty years of musical career. <br><br>Pedro Mann is twenty-nine years old, but started taking piano lessons when he was just eight,and awakened to music under the influence of his mother’s classical guitar playing.",
+      "tracks": [
+        { "number": "1", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Procurando Lola" },
+        { "number": "2", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Dona do relâmpago" },
+        { "number": "3", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Vacas magras" },
+        { "number": "4", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Vinte e nove" },
+        { "number": "5", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Machucado" },
+        { "number": "6", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Onda do mar" },
+        { "number": "7", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Ainda danço sozinho" },
+        { "number": "8", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Samba em três" },
+        { "number": "9", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Órbita" },
+        { "number": "10","composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Toda calma desse mundo" }
+      ]
+    },
+    {
       "id": "aventureira",
       "name": "Aventureira",
       "artist": "Luiza Sales",
       "premium": false,
       "coverImage":  "cover-aventureira.jpg",
-      "artistImage": "luiza.jpg",
+      "artistImage": "artist-luiza-sales.jpg",
       "smallDescription": "Segundo trabalho da violonista, arranjadora, compositora, cantora e produtora brasileira.",
       "bigDescription": "Segundo disco do sexteto instrumental carioca com sua mistura de MPB e ritmos latinos. E mais um pouco de texto aqui e ali e coisa e tal.",
       "tracks": [
@@ -35,12 +57,12 @@
       ]
     },
     {
-      "id": "aventureira-2",
-      "name": "Aventureira 2",
-      "artist": "Luiza Sales 2",
+      "id": "vagalume",
+      "name": "Vagalume",
+      "artist": "Matheus VK",
       "premium": false,
-      "coverImage":  "cover-aventureira.jpg",
-      "artistImage": "luiza.jpg",
+      "coverImage":  "cover-vagalume.jpg",
+      "artistImage": "artist-matheus-vk.jpg",
       "smallDescription": "Segundo trabalho da violonista, arranjadora, compositora, cantora e produtora brasileira.",
       "bigDescription": "Segundo disco do sexteto instrumental carioca com sua mistura de MPB e ritmos latinos. E mais um pouco de texto aqui e ali e coisa e tal.",
       "tracks": [
@@ -57,78 +79,12 @@
       ]
     },
     {
-      "id": "aventureira-3",
-      "name": "Luiza Sales 3",
-      "artist": "Luiza Sales 3",
+      "id": "som-na-sala",
+      "name": "Som Na Sala",
+      "artist": "Vinicius Castro",
       "premium": false,
-      "coverImage":  "cover-aventureira.jpg",
-      "artistImage": "luiza.jpg",
-      "smallDescription": "Segundo trabalho da violonista, arranjadora, compositora, cantora e produtora brasileira.",
-      "bigDescription": "Segundo disco do sexteto instrumental carioca com sua mistura de MPB e ritmos latinos. E mais um pouco de texto aqui e ali e coisa e tal.",
-      "tracks": [
-        { "number": "1", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Procurando Lola" },
-        { "number": "2", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Dona do relâmpago" },
-        { "number": "3", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Vacas magras" },
-        { "number": "4", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Vinte e nove" },
-        { "number": "5", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Machucado" },
-        { "number": "6", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Onda do mar" },
-        { "number": "7", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Ainda danço sozinho" },
-        { "number": "8", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Samba em três" },
-        { "number": "9", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Órbita" },
-        { "number": "10","composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Toda calma desse mundo" }
-      ]
-    },
-    {
-      "id": "aventureira-4",
-      "name": "Luiza Sales 4",
-      "artist": "Luiza Sales 4",
-      "premium": false,
-      "coverImage":  "cover-aventureira.jpg",
-      "artistImage": "luiza.jpg",
-      "smallDescription": "Segundo trabalho da violonista, arranjadora, compositora, cantora e produtora brasileira.",
-      "bigDescription": "Segundo disco do sexteto instrumental carioca com sua mistura de MPB e ritmos latinos. E mais um pouco de texto aqui e ali e coisa e tal.",
-      "tracks": [
-        { "number": "1", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Procurando Lola" },
-        { "number": "2", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Dona do relâmpago" },
-        { "number": "3", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Vacas magras" },
-        { "number": "4", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Vinte e nove" },
-        { "number": "5", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Machucado" },
-        { "number": "6", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Onda do mar" },
-        { "number": "7", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Ainda danço sozinho" },
-        { "number": "8", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Samba em três" },
-        { "number": "9", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Órbita" },
-        { "number": "10","composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Toda calma desse mundo" }
-      ]
-    },
-    {
-      "id": "aventureira-5",
-      "name": "Aventureira 5",
-      "artist": "Luiza Sales 5",
-      "premium": true,
-      "coverImage":  "cover-aventureira.jpg",
-      "artistImage": "luiza.jpg",
-      "smallDescription": "Segundo trabalho da violonista, arranjadora, compositora, cantora e produtora brasileira.",
-      "bigDescription": "Segundo disco do sexteto instrumental carioca com sua mistura de MPB e ritmos latinos. E mais um pouco de texto aqui e ali e coisa e tal.",
-      "tracks": [
-        { "number": "1", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Procurando Lola" },
-        { "number": "2", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Dona do relâmpago" },
-        { "number": "3", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Vacas magras" },
-        { "number": "4", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Vinte e nove" },
-        { "number": "5", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Machucado" },
-        { "number": "6", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Onda do mar" },
-        { "number": "7", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Ainda danço sozinho" },
-        { "number": "8", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Samba em três" },
-        { "number": "9", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Órbita" },
-        { "number": "10","composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Toda calma desse mundo" }
-      ]
-    },
-    {
-      "id": "aventureira-6",
-      "name": "Aventureira 6",
-      "artist": "Luiza Sales 6",
-      "premium": true,
-      "coverImage":  "cover-aventureira.jpg",
-      "artistImage": "luiza.jpg",
+      "coverImage":  "cover-som-na-sala.jpg",
+      "artistImage": "artist-vinicius-castro.jpg",
       "smallDescription": "Segundo trabalho da violonista, arranjadora, compositora, cantora e produtora brasileira.",
       "bigDescription": "Segundo disco do sexteto instrumental carioca com sua mistura de MPB e ritmos latinos. E mais um pouco de texto aqui e ali e coisa e tal.",
       "tracks": [

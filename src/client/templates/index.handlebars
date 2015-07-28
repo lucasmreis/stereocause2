@@ -55,13 +55,7 @@
             <div class="card-text">
               <p class="card-title">{{ name }}</p>
               <p class="card-body">{{ artist }}</p>
-              <p class="lock">
-                {{#if premium}}
-                  <i class="fa fa-lock locked"></i>
-                {{else}}
-                  <i class="fa fa-unlock-alt not-locked"></i>
-                {{/if}}
-              </p>
+              <p class="card-body">{{ smallDescription }}</p>
             </div>
           </div>
         </li>
