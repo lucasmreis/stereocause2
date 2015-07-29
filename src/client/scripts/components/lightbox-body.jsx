@@ -29,6 +29,10 @@ var LightboxBody = React.createClass({
     </div>});
   },
 
+  renderDescription: function(a) {
+    return a.bigDescription.map(d => <p>{d}</p>);
+  },
+
   currentArtist: function() { return artistFromState(this.state.cursor)(cause); },
 
   artistImage: function(a) { return 'assets/images/' + a.artistImage; },
@@ -38,9 +42,7 @@ var LightboxBody = React.createClass({
 
     return <div className="lightbox-body">
       <img src={ this.artistImage(a) } className="lightbox-artist-img" />
-      <p className="lightbox-artist-description">
-        { this.currentArtist().bigDescription }
-      </p>
+      <div className="lightbox-artist-description">{ this.renderDescription(a) }</div>
       <div className="lightbox-album-title">Album Title</div>
       { this.listTracks(a) }
     </div>

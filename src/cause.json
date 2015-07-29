@@ -20,7 +20,7 @@
       "coverImage":  "cover-o-mundo-mora-logo-ali.jpg",
       "artistImage": "artist-pedro-mann.jpg",
       "smallDescription": "Pop songs that will bring you to ...",
-      "bigDescription": "O mundo mora logo ali (the world lives close by) is the name of the new album by bass player, singer and songwriter Pedro Mann, who left home and set out to embrace the world upon releasing thirteen of his best loved songs, in this first solo project, under the Rio de Janeiro label, Bolacha Discos. <br><br>Home, in this context, is not his parents’ house, which he had long left. The comfort zone which is refered to is other people’s homes, the several artists and bands with whom he played collaborated and developed in twenty years of musical career. <br><br>Pedro Mann is twenty-nine years old, but started taking piano lessons when he was just eight,and awakened to music under the influence of his mother’s classical guitar playing.",
+      "bigDescription": ["O mundo mora logo ali (the world lives close by) is the name of the new album by bass player, singer and songwriter Pedro Mann, who left home and set out to embrace the world upon releasing thirteen of his best loved songs, in this first solo project, under the Rio de Janeiro label, Bolacha Discos.", "Home, in this context, is not his parents’ house, which he had long left. The comfort zone which is refered to is other people’s homes, the several artists and bands with whom he played collaborated and developed in twenty years of musical career.", "Pedro Mann is twenty-nine years old, but started taking piano lessons when he was just eight,and awakened to music under the influence of his mother’s classical guitar playing."],
       "tracks": [
         { "number": "1", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Procurando Lola" },
         { "number": "2", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Dona do relâmpago" },
@@ -42,7 +42,7 @@
       "coverImage":  "cover-aventureira.jpg",
       "artistImage": "artist-luiza-sales.jpg",
       "smallDescription": "Segundo trabalho da violonista, arranjadora, compositora, cantora e produtora brasileira.",
-      "bigDescription": "Segundo disco do sexteto instrumental carioca com sua mistura de MPB e ritmos latinos. E mais um pouco de texto aqui e ali e coisa e tal.",
+      "bigDescription": ["Segundo disco do sexteto instrumental carioca com sua mistura de MPB e ritmos latinos. E mais um pouco de texto aqui e ali e coisa e tal."],
       "tracks": [
         { "number": "1", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Procurando Lola" },
         { "number": "2", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Dona do relâmpago" },
@@ -64,7 +64,7 @@
       "coverImage":  "cover-vagalume.jpg",
       "artistImage": "artist-matheus-vk.jpg",
       "smallDescription": "Segundo trabalho da violonista, arranjadora, compositora, cantora e produtora brasileira.",
-      "bigDescription": "Segundo disco do sexteto instrumental carioca com sua mistura de MPB e ritmos latinos. E mais um pouco de texto aqui e ali e coisa e tal.",
+      "bigDescription": ["Matheus von Krüger was born in Bahia — birthplace of Tropicalia and Bossa Nova legends João Gilberto, Astrud Gilberto, Gilberto Gil and Caetano Veloso — but never bragged about his musical heritage. Growing up von Krüger lived in Maranhão, Pará and New Zealand, finally putting his roots down in Rio de Janeiro.", "Produced by three-time Grammy Award-winner Alê Siqueira, Vagalume takes von Krüger back to the small Bahia town of Imbassaí and signals a turning point in his career."],
       "tracks": [
         { "number": "1", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Procurando Lola" },
         { "number": "2", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Dona do relâmpago" },
@@ -86,7 +86,7 @@
       "coverImage":  "cover-som-na-sala.jpg",
       "artistImage": "artist-vinicius-castro.jpg",
       "smallDescription": "Segundo trabalho da violonista, arranjadora, compositora, cantora e produtora brasileira.",
-      "bigDescription": "Segundo disco do sexteto instrumental carioca com sua mistura de MPB e ritmos latinos. E mais um pouco de texto aqui e ali e coisa e tal.",
+      "bigDescription": ["Segundo disco do sexteto instrumental carioca com sua mistura de MPB e ritmos latinos. E mais um pouco de texto aqui e ali e coisa e tal."],
       "tracks": [
         { "number": "1", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Procurando Lola" },
         { "number": "2", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Dona do relâmpago" },
@@ -106,19 +106,13 @@
       "name": "Charity Water",
       "image": "charity1.jpg",
       "link": "http://www.charitywater.org/",
-      "description": "Lorem ipsizzle dolor shizznit amet, consectetuer adipiscing elit. Nullam sapizzle velizzle, own yo' for sure, suscipit quis, gangster fo shizzle, arcu. Pellentesque pimpin' tortizzle. Fo shizzle erizzle. Yippiyo nizzle gangsta dapibus daahng dawg tempus tempor. Maurizzle shit nibh things turpizzle."
+      "description": "Charity: water is a non-profit organization bringing clean and safe drinking water to people in developing nations. Most of us have never really been thirsty. We've never had to leave our houses and walk five miles to fetch water. We simply turn on the tap, and water comes out. Clean. Yet there are 748 million people on the planet who don't have clean water. It's hard to imagine what 748 million people looks like really, but one in nine might be easier. One in nine people in our world doesn't have access to the most basic of human needs. Something we can't imagine going 12 hours without."
     },
     {
-      "name": "Another Charity",
-      "image": "charity2.jpg",
+      "name": "Casa da Árvore",
+      "image": "charity-casa-da-arvore.jpg",
       "link": "http://www.charitywater.org/",
-      "description": "Meggings chillwave drinking vinegar Austin artisan bespoke, Neutra salvia occupy. Chillwave letterpress street art, normcore synth tilde Echo Park Pinterest squid typewriter Godard. <br><br>Pitchfork hashtag deep v, bicycle rights PBR scenester Williamsburg mixtape asymmetrical hoodie seitan Cosby sweater before they sold out crucifix. Godard Vice cliche chillwave hashtag jean shorts, readymade VHS synth beard lo-fi literally. Photo booth tattooed bitters, next level fanny pack lo-fi farm-to-table letterpress vegan forage typewriter."
-    },
-    {
-      "name": "One Mor",
-      "image": "charity3.jpg",
-      "link": "http://www.charitywater.org/",
-      "description": "Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.<br><br>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions."
+      "description": "Inspired by the work and legacy of french pediatrician and psychoanalyst Françoise Dolto, Casa da Arvore is a Brazilian institution that develops children's mental health projects in some of Rio de Janeiro's favelas. By creating and providing a coexistence environment, these projects favor the creative potential of the children and their caretakers, encourages autonomy and promotes health."
     }
   ]
 }
