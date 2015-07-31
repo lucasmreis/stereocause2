@@ -22,16 +22,19 @@
       "smallDescription": "Pop songs that will bring you to ...",
       "bigDescription": ["O mundo mora logo ali (the world lives close by) is the name of the new album by bass player, singer and songwriter Pedro Mann, who left home and set out to embrace the world upon releasing thirteen of his best loved songs, in this first solo project, under the Rio de Janeiro label, Bolacha Discos.", "Home, in this context, is not his parents’ house, which he had long left. The comfort zone which is refered to is other people’s homes, the several artists and bands with whom he played collaborated and developed in twenty years of musical career.", "Pedro Mann is twenty-nine years old, but started taking piano lessons when he was just eight,and awakened to music under the influence of his mother’s classical guitar playing."],
       "tracks": [
-        { "number": "1", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Procurando Lola" },
-        { "number": "2", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Dona do relâmpago" },
-        { "number": "3", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Vacas magras" },
-        { "number": "4", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Vinte e nove" },
-        { "number": "5", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Machucado" },
-        { "number": "6", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Onda do mar" },
-        { "number": "7", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Ainda danço sozinho" },
-        { "number": "8", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Samba em três" },
-        { "number": "9", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Órbita" },
-        { "number": "10","composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Toda calma desse mundo" }
+        { "number": "1", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "o-mundo-mora-logo-ali/01-onda-do-mar.mp3", "title": "Onda Do Mar" },
+        { "number": "2", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "o-mundo-mora-logo-ali/02-a-pe.mp3", "title": "A Pé" },
+        { "number": "3", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "o-mundo-mora-logo-ali/03-vai-mas-volta.mp3", "title": "Vai Mas Volta" },
+        { "number": "4", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "o-mundo-mora-logo-ali/04-o-mundo-mora-logo-ali.mp3", "title": "O Mundo Mora Logo Ali" },
+        { "number": "5", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "o-mundo-mora-logo-ali/05-Separado.mp3", "title": "Separado" },
+        { "number": "6", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "o-mundo-mora-logo-ali/06-so-no-olhar.mp3", "title": "Só No Olhar" },
+        { "number": "7", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "o-mundo-mora-logo-ali/07-novo-chao.mp3", "title": "Novo Chão" },
+        { "number": "8", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "o-mundo-mora-logo-ali/08-por-perto.mp3", "title": "Por Perto" },
+        { "number": "9", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "o-mundo-mora-logo-ali/09-temporada.mp3", "title": "Temporada" },
+        { "number": "10","composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "o-mundo-mora-logo-ali/10-pane-no-ceu.mp3", "title": "Pane No Céu" },
+        { "number": "11","composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "o-mundo-mora-logo-ali/11-capitao-da-minha-infancia.mp3", "title": "Capitão Da Minha Infância" },
+        { "number": "12","composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "o-mundo-mora-logo-ali/12-todo-sentimento-bom.mp3", "title": "Todo Sentimento Bom" },
+        { "number": "13","composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "o-mundo-mora-logo-ali/13-ruido-surdo.mp3", "title": "Ruído Surdo" }
       ]
     },
     {
@@ -44,16 +47,17 @@
       "smallDescription": "Segundo trabalho da violonista, arranjadora, compositora, cantora e produtora brasileira.",
       "bigDescription": ["Segundo disco do sexteto instrumental carioca com sua mistura de MPB e ritmos latinos. E mais um pouco de texto aqui e ali e coisa e tal."],
       "tracks": [
-        { "number": "1", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Procurando Lola" },
-        { "number": "2", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Dona do relâmpago" },
-        { "number": "3", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Vacas magras" },
-        { "number": "4", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Vinte e nove" },
-        { "number": "5", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Machucado" },
-        { "number": "6", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Onda do mar" },
-        { "number": "7", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Ainda danço sozinho" },
-        { "number": "8", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Samba em três" },
-        { "number": "9", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Órbita" },
-        { "number": "10","composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Toda calma desse mundo" }
+        { "number": "1", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "aventureira/01-chuva.mp3", "title": "Chuva" },
+        { "number": "2", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "aventureira/02-janelas-floridas.mp3", "title": "Janelas Floridas" },
+        { "number": "3", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "aventureira/03-mansinho.mp3", "title": "Mansinho" },
+        { "number": "4", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "aventureira/04-bonito.mp3", "title": "Bonito" },
+        { "number": "5", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "aventureira/05-cancao-de-amor.mp3", "title": "Canção De Amor" },
+        { "number": "6", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "aventureira/06-reverencia.mp3", "title": "Reverência" },
+        { "number": "7", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "aventureira/07-a-frio.mp3", "title": "À Frio" },
+        { "number": "8", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "aventureira/08-forca-do-tempo.mp3", "title": "Força Do Tempo" },
+        { "number": "9", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "aventureira/09-leve.mp3", "title": "Leve" },
+        { "number": "10","composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "aventureira/10-aventureira.mp3", "title": "Aventureira" },
+        { "number": "11","composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "aventureira/11-errante-bonus-track.mp3", "title": "Errante (bonus track)" }
       ]
     },
     {
@@ -66,16 +70,16 @@
       "smallDescription": "Segundo trabalho da violonista, arranjadora, compositora, cantora e produtora brasileira.",
       "bigDescription": ["Matheus von Krüger was born in Bahia — birthplace of Tropicalia and Bossa Nova legends João Gilberto, Astrud Gilberto, Gilberto Gil and Caetano Veloso — but never bragged about his musical heritage. Growing up von Krüger lived in Maranhão, Pará and New Zealand, finally putting his roots down in Rio de Janeiro.", "Produced by three-time Grammy Award-winner Alê Siqueira, Vagalume takes von Krüger back to the small Bahia town of Imbassaí and signals a turning point in his career."],
       "tracks": [
-        { "number": "1", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Procurando Lola" },
-        { "number": "2", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Dona do relâmpago" },
-        { "number": "3", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Vacas magras" },
-        { "number": "4", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Vinte e nove" },
-        { "number": "5", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Machucado" },
-        { "number": "6", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Onda do mar" },
-        { "number": "7", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Ainda danço sozinho" },
-        { "number": "8", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Samba em três" },
-        { "number": "9", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Órbita" },
-        { "number": "10","composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Toda calma desse mundo" }
+        { "number": "1", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "vagalume/01-viver-o-dom.mp3", "title": "Viver o Dom" },
+        { "number": "2", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "vagalume/02-sempre-tem-ceu-azul.mp3", "title": "Sempre Tem Céu Azul" },
+        { "number": "3", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "vagalume/03-vagalume.mp3", "title": "Vagalume" },
+        { "number": "4", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "vagalume/04-leva-e-traz.mp3", "title": "Leva e Traz" },
+        { "number": "5", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "vagalume/05-sabe.mp3", "title": "Sabe" },
+        { "number": "6", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "vagalume/06-quando-voce-adora.mp3", "title": "Quando Você Adora" },
+        { "number": "7", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "vagalume/07-hoje-sem-amanha.mp3", "title": "Hoje Sem Amanhã" },
+        { "number": "8", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "vagalume/08-quintal.mp3", "title": "Quintal" },
+        { "number": "9", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "vagalume/09-alice.mp3", "title": "Alice" },
+        { "number": "10","composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "vagalume/10-mais-luz-que-ilusao.mp3", "title": "Mais Luz Que Ilusão" }
       ]
     },
     {
@@ -88,23 +92,25 @@
       "smallDescription": "Segundo trabalho da violonista, arranjadora, compositora, cantora e produtora brasileira.",
       "bigDescription": ["Segundo disco do sexteto instrumental carioca com sua mistura de MPB e ritmos latinos. E mais um pouco de texto aqui e ali e coisa e tal."],
       "tracks": [
-        { "number": "1", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Procurando Lola" },
-        { "number": "2", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Dona do relâmpago" },
-        { "number": "3", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Vacas magras" },
-        { "number": "4", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Vinte e nove" },
-        { "number": "5", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Machucado" },
-        { "number": "6", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Onda do mar" },
-        { "number": "7", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Ainda danço sozinho" },
-        { "number": "8", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Samba em três" },
-        { "number": "9", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Órbita" },
-        { "number": "10","composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "sample1.mp3", "title": "Toda calma desse mundo" }
+        { "number": "1", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "som-na-sala/01-linha-do-tempo.mp3", "title": "Linha Do Tempo" },
+        { "number": "2", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "som-na-sala/02-cancao-de-amor.mp3", "title": "Canção De Amor" },
+        { "number": "3", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "som-na-sala/03-sem-arestas.mp3", "title": "Sem Arestas" },
+        { "number": "4", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "som-na-sala/04-antes-de-amar-te.mp3", "title": "Antes De Amar-te" },
+        { "number": "5", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "som-na-sala/05-profecia.mp3", "title": "Profecia" },
+        { "number": "6", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "som-na-sala/06-ser-diferente-e-normal.mp3", "title": "Ser Diferente É Normal" },
+        { "number": "7", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "som-na-sala/07-canto-dalma.mp3", "title": "Canto D'Alma" },
+        { "number": "8", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "som-na-sala/08-boto-fe.mp3", "title": "Boto Fé" },
+        { "number": "9", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "som-na-sala/09-o-animal-de-estimacao.mp3", "title": "O Animal De Estimação" },
+        { "number": "10", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "som-na-sala/10-cafe-da-manha.mp3", "title": "Café Da Manhã" },
+        { "number": "11", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "som-na-sala/11-por-toda-vida.mp3", "title": "Por Toda Vida" },
+        { "number": "12", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "som-na-sala/12-lembranca.mp3", "title": "Lembrança" }
       ]
     }
   ],
   "charities": [
     {
       "name": "Charity Water",
-      "image": "charity1.jpg",
+      "image": "charity-water.jpg",
       "link": "http://www.charitywater.org/",
       "description": "Charity: water is a non-profit organization bringing clean and safe drinking water to people in developing nations. Most of us have never really been thirsty. We've never had to leave our houses and walk five miles to fetch water. We simply turn on the tap, and water comes out. Clean. Yet there are 748 million people on the planet who don't have clean water. It's hard to imagine what 748 million people looks like really, but one in nine might be easier. One in nine people in our world doesn't have access to the most basic of human needs. Something we can't imagine going 12 hours without."
     },
