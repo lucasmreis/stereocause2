@@ -45,7 +45,9 @@
       "coverImage":  "cover-aventureira.jpg",
       "artistImage": "artist-luiza-sales.jpg",
       "smallDescription": "Segundo trabalho da violonista, arranjadora, compositora, cantora e produtora brasileira.",
-      "bigDescription": ["Segundo disco do sexteto instrumental carioca com sua mistura de MPB e ritmos latinos. E mais um pouco de texto aqui e ali e coisa e tal."],
+      "bigDescription": ["Rio de Janeiro singer and songwriter Luiza Sales released her first album “Breve Leveza” in 2011. The album was produced in her hometown by Los Angeles-based engineer and producer Dan Garcia whose previous work includes Christina Aguilera, Whitney Houston, Earth, Wind and Fire and the Nevil Brothers.",
+        "Produced by New York-based producer Vinicius Castro, her latest album “Aventureira” is a crowdfunding effort which includes songs by Pedro Mann and Yuri Villar and brings a mix of Brazilian folk music, samba, bossa nova, forró, maracatu as well as jazz and latino influences.",
+        "“Aventureira” deals with longing, love and the future with an optimistic look and the freshness of the new Brazilian music."],
       "tracks": [
         { "number": "1", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "aventureira/01-chuva.mp3", "title": "Chuva" },
         { "number": "2", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "aventureira/02-janelas-floridas.mp3", "title": "Janelas Floridas" },

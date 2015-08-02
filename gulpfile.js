@@ -57,7 +57,7 @@ gulp.task('server-build', function() {
     .pipe(gulp.dest('dist/server'));
 });
 
-+gulp.task('client', ['template-index', 'styles', 'assets', 'scripts']);
+gulp.task('client', ['template-index', 'styles', 'assets', 'scripts']);
 
 gulp.task('server-test', function() {
   return gulp.src('dist/server/**/*-spec.js')
