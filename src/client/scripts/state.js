@@ -37,10 +37,10 @@ var state = new Baobab({
   errors: {
     value: 'Incorrect value',
     email: 'Incorrect email',
-    number: 'Incorrect number',
-    exp_month: 'Incorrect expiry month',
-    exp_year: 'Incorrect expiry year',
-    cvc: 'Incorrect Cvc',
+    number: undefined,
+    exp_month: undefined,
+    exp_year: undefined,
+    cvc: undefined,
     general: 'General error'
   },
   bought: {

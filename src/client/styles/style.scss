@@ -17,6 +17,8 @@ $sc-blue: #03a9f4;
 $sc-light-blue: #b3e5fc;
 $sc-dark-blue: #0288d1;
 
+$sc-error: #ff0033;
+
 $width-sm: 768px;
 $width-md: 992px;
 $width-lg: 1200px;
@@ -300,6 +302,15 @@ strong {
 
 .input-container {
   position: relative;
+}
+
+.input-error {
+  border: 1px solid $sc-error !important;
+}
+
+.message-error {
+  color: $sc-error !important;
+  margin: 0px 5px;
 }
 
 .icon-input {
