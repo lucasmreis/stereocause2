@@ -15,11 +15,14 @@ var EmailAndOptions = React.createClass({
   updateNotifyMe: EmailActions.updateNotifyMe(State),
   updateShareMyEmail: EmailActions.updateShareMyEmail(State),
 
+  clearErrors: () => State.set('errors', {}),
+
   render: function() {
     return <div>
       <span className="input-container">
         <input defaultValue={ this.cursors.email.get() }
           onBlur={ this.updateEmail }
+          onChange={ this.clearErrors }
           type="email"
           className="input-sc input-large input-with-icon input-email"
           placeholder="Your Email Address" />

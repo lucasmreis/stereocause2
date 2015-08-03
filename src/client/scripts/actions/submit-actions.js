@@ -22,7 +22,14 @@ const createToken = () => new Promise((resolve, reject) =>
   Stripe.card.createToken(
     requestStripe(State.get()),
     (status, response) =>
-      status === 200 ? resolve(response) : reject(response)));
+      status === 200 ? resolve(response) : reject({tokenError: response.error})));
+
+const handleError = e => {
+  if (e.tokenError) {
+    State.select('errors').set(e.tokenError.param, e.tokenError.message);
+    State.set('submitCaption', 'Contribute!');
+  }
+};
 
 export const contribute = () => composeP(
   setDone,
@@ -34,4 +41,5 @@ export const contribute = () => composeP(
   apiSend,
   requestContribution(State.get()),
   createToken,
-  setValidating)();
+  setValidating)()
+  .catch(handleError);

@@ -31,12 +31,21 @@ var state = new Baobab({
   email: 'bla@bla.com',
   notifyMe: true,
   shareMyEmail: false,
-  number: '4242 4242 4242 4242',
+  number: '', // '4242 4242 4242 4242',
   expiry: '12/18',
   cvc: '123',
+  errors: {
+    value: 'Incorrect value',
+    email: 'Incorrect email',
+    number: 'Incorrect number',
+    exp_month: 'Incorrect expiry month',
+    exp_year: 'Incorrect expiry year',
+    cvc: 'Incorrect Cvc',
+    general: 'General error'
+  },
   bought: {
-    email: 'trewtrewbla@bla.com',
-    _id: '5560cb2ebabd9501194c7a86'
+    email: undefined, // 'trewtrewbla@bla.com',
+    _id: undefined // '5560cb2ebabd9501194c7a86'
   }
 },
 {

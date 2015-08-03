@@ -17,12 +17,20 @@ var CreditCard = React.createClass({
     cvc: ['cvc']
   },
 
+  clearErrors: () => State.set('errors', {}),
+
   updateNumber: targetValue(CreditCardActions.updateNumber(State)),
   updateExpiry: targetValue(CreditCardActions.updateExpiry(State)),
   updateCvc:    targetValue(CreditCardActions.updateCvc(State)),
 
-  changeNumber: function(x) { this.setState({ number: formatNumber(x.target.value) }) },
-  changeExpiry: function(x) { this.setState({ expiry: formatExpiry(x.target.value) }) },
+  changeNumber: function(x) {
+    this.setState({ number: formatNumber(x.target.value) });
+    this.clearErrors();
+  },
+  changeExpiry: function(x) {
+    this.setState({ expiry: formatExpiry(x.target.value) });
+    this.clearErrors();
+  },
 
   render: function() {
     return <div className="btn-value-container">
@@ -49,6 +57,7 @@ var CreditCard = React.createClass({
       <span className="input-container">
         <input defaultValue={ this.cursors.cvc.get() }
           onBlur={ this.updateCvc }
+          onChange={ this.clearErrors }
           className="input-sc input-with-icon input-cvc"
           placeholder="Security Code" />
         <i className="fa fa-lock fa-lg icon-input-with-padding"></i>
