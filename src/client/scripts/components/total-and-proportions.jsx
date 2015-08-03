@@ -12,9 +12,15 @@ var TotalAndProportions = React.createClass({
     dividing: ['dividing'],
   },
 
-  onClickTotal: v => () => State.set('total', { customizing: false, value: v }),
+  onClickTotal: v => () => {
+    State.set('total', { customizing: false, value: v });
+    State.set('errors', {});
+  },
 
-  onClickCustomize: () => State.select('total').set('customizing', true),
+  onClickCustomize: () => {
+    State.select('total').set('customizing', true);
+    State.set('errors', {});
+  },
 
   onChangeCustomize: e => State.select('total').set('value', e.target.value * 100),
 
