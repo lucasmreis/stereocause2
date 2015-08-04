@@ -11,6 +11,7 @@ const {tap, composeP, compose, prop} = R;
 const cb = x => console.log(JSON.stringify(x, null, '  '));
 
 const setValidating = () => State.set('submitCaption', 'Validating Card...');
+const resetSubmit   = () => State.set('submitCaption', 'Contribute!');
 
 const setDone = c => {
   State.set('bought', c);
@@ -27,8 +28,12 @@ const createToken = () => new Promise((resolve, reject) =>
 const handleError = e => {
   if (e.tokenError) {
     State.select('errors').set(e.tokenError.param, e.tokenError.message);
-    State.set('submitCaption', 'Contribute!');
+  } else {
+    const error = JSON.parse(e.error);
+    const param = error.param ? error.param : 'general';
+    State.select('errors').set(param, error.message);
   }
+  resetSubmit();
 };
 
 export const contribute = () => composeP(

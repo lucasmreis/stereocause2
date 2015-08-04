@@ -20,6 +20,7 @@ var CreditCard = React.createClass({
     expMonthError: ['errors', 'exp_month'],
     expYearError: ['errors', 'exp_year'],
     cvcError: ['errors', 'cvc'],
+    generalError: ['errors', 'general']
   },
 
   clearErrors: () => State.set('errors', {}),
@@ -90,6 +91,10 @@ var CreditCard = React.createClass({
 
       { this.expOrCvcErrors(this.cursors.errors.get()) ?
         <p className="message-error">{ this.expOrCvcErrors() }</p> :
+        undefined }
+
+      { this.cursors.generalError.get() ?
+        <p className="message-error">{ this.cursors.generalError.get() }</p> :
         undefined }
     </div>
   }

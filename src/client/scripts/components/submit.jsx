@@ -7,7 +7,9 @@ import {requestStripe, isLoading} from '../lib/helpers';
 
 var Submit = React.createClass({
   mixins: [State.mixin],
-  cursor: ['submitCaption'],
+  cursors: {
+    submitCaption: ['submitCaption']
+  },
 
   contribute: SubmitActions.contribute,
 
@@ -16,10 +18,12 @@ var Submit = React.createClass({
   isLoading: s => isLoading(s) ? <i className="fa fa-circle-o-notch fa-spin"></i> : null,
 
   render: function() {
-    return <button className={ this.submitClass(this.state.cursor) }
-      onClick={ this.contribute }>
-      { this.state.cursor } { this.isLoading(this.state.cursor) }
-    </button>
+    return <div>
+      <button className={ this.submitClass(this.cursors.submitCaption.get()) }
+        onClick={ this.contribute }>
+        { this.cursors.submitCaption.get() } { this.isLoading(this.cursors.submitCaption.get()) }
+      </button>
+    </div>
   }
 });
 

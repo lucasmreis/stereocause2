@@ -56,8 +56,13 @@ const handler = (request, reply) => {
     createStripeRequest);
 
   return contribute(initial)
-    .then(x  => reply(x))
-    .catch(e => { console.log('ERROR', e); reply(e).code(500); });
+    .then(
+      x => reply(x),
+      e => {
+        const errorResponse = e.raw ? e.raw : e;
+        console.log('ERROR', errorResponse);
+        return reply(errorResponse).code(500);
+      });
 };
 
 export default {

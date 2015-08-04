@@ -35,13 +35,13 @@ var state = new Baobab({
   expiry: '12/18',
   cvc: '123',
   errors: {
-    value: 'Incorrect value',
-    email: 'Incorrect email',
+    value: undefined,
+    email: undefined,
     number: undefined,
     exp_month: undefined,
     exp_year: undefined,
     cvc: undefined,
-    general: 'General error'
+    general: undefined
   },
   bought: {
     email: undefined, // 'trewtrewbla@bla.com',

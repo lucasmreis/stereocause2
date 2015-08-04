@@ -1,5 +1,5 @@
 import R from 'ramda';
-import Reqwest from 'reqwest';
+import rp from 'request-promise';
 
 const {compose, toPairs, concat, prop, join, map, ifElse, eq} = R;
 const I = R.identity;
@@ -21,20 +21,13 @@ const buildParamsUri = compose(
   map(join('=')),
   toPairs);
 
-export const apiSend = req =>
-  new Promise((resolve, reject) => {
-    Reqwest({
-      method: req.method,
-
-      url: compose(
-        concat(req.url),
-        buildParamsUri,
-        prop('query')
-        )(req),
-
-      data: req.body
-    }).then(
-      ok => resolve(ok),
-      err => reject(err)
-    );
-  });
+export const apiSend = req => rp({
+  method: req.method,
+  baseUrl: window.location.origin,
+  url: compose(
+    concat(req.url),
+    buildParamsUri,
+    prop('query')
+    )(req),
+  body: JSON.stringify(req.body)
+}).then(JSON.parse);
