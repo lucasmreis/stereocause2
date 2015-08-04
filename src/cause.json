@@ -20,7 +20,9 @@
       "coverImage":  "cover-o-mundo-mora-logo-ali.jpg",
       "artistImage": "artist-pedro-mann.jpg",
       "smallDescription": "Pop songs that will bring you to ...",
-      "bigDescription": ["O mundo mora logo ali (the world lives close by) is the name of the new album by bass player, singer and songwriter Pedro Mann, who left home and set out to embrace the world upon releasing thirteen of his best loved songs, in this first solo project, under the Rio de Janeiro label, Bolacha Discos.", "Home, in this context, is not his parents’ house, which he had long left. The comfort zone which is refered to is other people’s homes, the several artists and bands with whom he played collaborated and developed in twenty years of musical career.", "Pedro Mann is twenty-nine years old, but started taking piano lessons when he was just eight,and awakened to music under the influence of his mother’s classical guitar playing."],
+      "bigDescription": ["Bassist, singer and composer Pedro Mann released his first solo album — “O Mundo Mora Logo Ali” —  in 2014. The album produced by Mann and producer Lucas Reis goes back and forth between Brazilian pop influences, sophisticated arrangements and catchy sing-along melodies.",
+        "Mann is also one of the founding members of Rio de Janeiro’s instrumental powerhouse Bondesom with which he previously released three other albums.",
+        "Throughout his career as a bassist, Mann shared the stage with Geraldo Azevedo e Carlos Malta, Roberta Sá, Forroçacana e Nicolas Krassik to name a few."],
       "tracks": [
         { "number": "1", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "o-mundo-mora-logo-ali/01-onda-do-mar.mp3", "title": "Onda Do Mar" },
         { "number": "2", "composers": [ "Antonia Adnet", "Gabriel Pondé" ], "file": "o-mundo-mora-logo-ali/02-a-pe.mp3", "title": "A Pé" },
